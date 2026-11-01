@@ -10,6 +10,9 @@
   "enabledPlugins": {
     "data@knowledge-work-plugins": true
   },
+  "attribution": {
+    "pr": ""
+  },
   "hooks": {
     "SessionStart": [
       {

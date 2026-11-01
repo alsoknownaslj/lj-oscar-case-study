@@ -40,3 +40,10 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   2026-10-31 hesitation about SessionStart hooks. Rejected: a blocking Stop hook (can't
   reliably tell whether prose was written → false blocks) and UserPromptSubmit injection
   (repeats the rule every turn for no gain).
+- **2026-11-01 — Branch names + PR attribution (Lauren).** Branch names never include
+  `claude/` and must say what the work is — a must in CLAUDE.md conventions. The
+  "Generated with Claude Code" footer comes off PR descriptions via the supported
+  `attribution.pr: ""` switch in `.claude/settings.json`, backed by a CLAUDE.md must for
+  sessions that write PR bodies themselves. Rejected: a PreToolUse hook rewriting PR
+  bodies — the attribution setting is the switch Claude Code actually honors, and body
+  rewriting across the several PR-creating tools is fragile. Commit trailers unchanged.
