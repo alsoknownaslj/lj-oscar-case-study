@@ -52,3 +52,14 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split
   history lives only in `oscar-case-study`. The "full-history duplicate" wording in the
   2026-11-01 duplication entry described the state before this reset.
+- **2026-11-01 — Requirement-1 health-status framing (proposed by session; Lauren to
+  ratify at report review).** Health status = per-member set of **CCS level-2 condition
+  flags**, each **chronic** (≥2 distinct claim dates ≥30 days apart, per the
+  healthcare-claims skill rule) or **one-off**, plus light utilization counts; the
+  Symptoms/Z-code and Residual chapters are tracked but never conditions; unmapped codes
+  are an explicit bucket. Round-trips to a one-sentence member description
+  (oscar_cs.health_status.render_vignette). Rejected: single severity score (hides which
+  conditions), utilization-only clustering (not clinically readable), CCS level 1 (too
+  coarse) and level 3 (too sparse). Full justification + numbers:
+  reports/2026-11-01_health-status-characterization.md. Per Lauren's 2026-10-31 call the
+  framing was to be proposed during analysis — this is that proposal, open to reopening.

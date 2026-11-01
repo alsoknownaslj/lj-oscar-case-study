@@ -35,3 +35,9 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   made unique keys look duplicated — always confirm keys with exact counts; (2) the
   profiler's AUTO-marker replace matched markers *mentioned in prose* — match markers on
   their own lines (line-anchored regex, fixed).
+- **2026-11-01** — duckdb 2.0 Python niceties/gotchas: named `$params` work inside
+  `create temp table ... as <select>` (keeps sql/ files parameterized from
+  src/oscar_cs/health_status.py constants), but `sum()` columns come back as float64 in
+  `.df()` — cast to int or vignette strings print "7.0". Fresh-container rebuild
+  (fetch→cache→profile) reproduced the data dictionary byte-identically except the
+  generation date: downloads are stable, data verified unchanged.

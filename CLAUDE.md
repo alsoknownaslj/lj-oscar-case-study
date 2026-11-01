@@ -68,7 +68,8 @@ No true nulls. `src/oscar_cs/data.py::parse_ccs2_code` extracts the bracket code
 
 One row = one diagnosis × member × day. Columns: `record_id` (unique int 1…1,919,983),
 `member_id` (str, `M0000001`-style, **245,166 distinct**), `date_svc` (date — **24 nulls,
-~37 dirty rows back to 1899**; real window **2015-12 → 2018-12**, volume peaks 2016),
+38 dirty rows back to 1899**; real window **2015-09 → 2018-12** (Jan–Aug 2015 holds only
+~160 rows; volume ramps from 2015-09 and peaks 2016)),
 `diag1` (ICD-10, **91.9% dotted** e.g. `N92.6`; junk includes 63× `000` and one quoted
 comma code `"L02.,821"`). The file has quoted fields deep inside — every reader must set
 `quote='"'` (auto-sniffing sees none in the first 20k rows and breaks at row 1,783,434).
@@ -119,7 +120,7 @@ Loading rules (enforced by `src/oscar_cs/data.py` — use it, don't hand-roll re
 7. **Choosing the wrong CCS granularity.** Level 1 (18 chapters) may be too coarse to be
    useful; level 3 too sparse. Justify the level you characterize members at; parse the
    level-2 bracket codes rather than string-matching long descriptions.
-8. **Ignoring the time dimension.** The windows don't even match: claims run **2015-12 →
+8. **Ignoring the time dimension.** The windows don't even match: claims run **2015-09 →
    2018-12**, prescriptions **2013-12 → 2018-06**. State the observation window for labels
    vs. features (same-period inference and prospective prediction are different claims and
    different splits), and don't let the rx-less final 6 months of claims bias labels.

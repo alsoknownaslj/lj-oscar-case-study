@@ -3,50 +3,57 @@
 _Rewrite this file whole (never append) at the end of a session or when direction changes.
 It is the baton: the next session reads it before doing anything._
 
-**As of 2026-11-01 (repo split-off session, closed cleanly).**
+**As of 2026-11-01 (requirement-1 analysis session, cloud).**
 
 ## Where things stand
 
-This repo, `alsoknownaslj/oscar-case-study-2`, is the project of record now. It is a
-duplicate of `alsoknownaslj/oscar-case-study` (left untouched) with three changes Lauren
-asked for on 2026-11-01. Git history here starts at the split: one root commit with the
-starting state, then the post-split work; pre-split history lives only in the original
-repo. The changes:
+Requirement 1 is built and written up, on branch **`req1-health-status`** (pushed; not
+merged to main — Lauren reviews first). The session was handed a `claude/...` branch and
+moved to a descriptive one per the CLAUDE.md branch must.
 
-- The repo-local `ml-classification` skill is gone. Generic DS mechanics — EDA, SQL,
-  stats, viz, modeling — all come from Anthropic's `data` plugin; see the routing table
-  in CLAUDE.md. `healthcare-claims` and `humanize` remain. There was no repo-local EDA
-  skill to remove; EDA already routed to `data:explore-data`.
-- The humanize pass is hook-enforced (`.claude/settings.json` + `.claude/hooks/`): the
-  rule is injected at every session start/resume/clear/compact, and a nudge fires after
-  each write to a human-facing `.md`. The hooks run in sessions opened on this repo.
-- `memory/decisions.md` and `memory/preferences.md` record both calls.
+- **Characterization (proposed, pending Lauren's ratification — see memory/decisions.md
+  2026-11-01):** per-member CCS level-2 condition flags, chronic (≥2 dates ≥30 days
+  apart) vs one-off; Symptoms/Z-code + Residual chapters tracked but never conditions;
+  unmapped codes an explicit counted bucket. Headlines: 245,165 members characterized,
+  35.1% with ≥1 chronic condition, median 2 conditions, 99.89% CCS row coverage.
+- **Code:** `scripts/build_health_status.py` (pipeline + stats + 3 deterministic
+  vignettes) → `data/processed/{member_conditions,member_health_status}.parquet` +
+  `health_status_stats.json` (all local-only; rebuild anytime). Policy constants in
+  `src/oscar_cs/health_status.py`; parameterized queries in `sql/`; shared duckdb views
+  in `src/oscar_cs/db.py` (scripts/sql.py now uses it). Tests cover the chronic rule
+  incl. a SQL↔Python parity check (`make test`: 10 pass).
+- **Report (humanize pass done):** `reports/2026-11-01_health-status-characterization.md`
+  + 2 figures (dataviz-skill palette, validated). Vignette member ids masked there; the
+  build script prints real ones.
+- **Doc corrections:** claims volume ramps from **2015-09** (not 2015-12) — CLAUDE.md,
+  data dictionary and data-quirks updated; new junk codes `99999`/`KHDX` logged.
 
-Setup carried over intact: verified schemas in CLAUDE.md, profiled data dictionary,
-`ccs.csv` committed, zero open blanks. **No analysis or modeling has been done** (none
-existed to carry over or strip), and Lauren's 72-hour window is still NOT open.
+Environment notes: fresh container rebuilt cleanly (`make fetch cache profile` — profile
+reproduced the dictionary byte-identically; Drive domains were allowed). The 72-hour
+window question is Lauren's to track; analysis work started this session on her go-ahead.
 
 ## Next concrete step
 
-Requirement 1 — the member health-status characterization:
-1. Exclusions first, counted: claims rows with null/pre-2015 `date_svc`, junk codes.
-2. Join claims→CCS via `normalize_icd10` (expect 99.89% row coverage; report it).
-3. Propose the characterization (not pre-committed): likely CCS level-2 condition flags
-   with the chronic rule (≥2 claim dates ≥30 days apart) + light utilization stats;
-   handle Residual/Symptoms chapters explicitly (`healthcare-claims` skill has the rules).
-4. Sanity-check with 2–3 member vignettes, then a milestone summary to `reports/`.
-Then requirement 2 (rx-only model): labels from claims/CCS, features from
-`prescription_drugs` only. The guardrails are CLAUDE.md common mistakes 4–6 and 8;
-mechanics come from `data:analyze` / `data:statistical-analysis`.
+1. **Lauren reviews** the report + framing (ratify or amend the 2026-11-01 decision;
+   likeliest amendment: re-bucket "Immunizations and screening" out of conditions — it's
+   #1 in "What more time buys").
+2. **Requirement 2 (rx-only model):** labels come from `member_health_status.parquet` /
+   `member_conditions.parquet` (rebuild via `python scripts/build_health_status.py`).
+   Guardrails: CLAUDE.md common mistakes 4–6 and 8 (member-level split, rx-only features,
+   multi-label one-vs-rest, window alignment — rx ends 2018-06, 6 months before claims).
+   Drug→condition strength tiers: `references/domain-notes.md` + healthcare-claims skill.
+   Mechanics: `data:analyze` + `data:statistical-analysis`. Target conditions to start:
+   chronic flags for drug-managed conditions (diabetes, hypertension, lipid disorders,
+   asthma/COPD, mental illness, cancer) — expect performance to follow the tier ladder.
+3. **Final deliverable assembly** (after req 2): supporting notebook that reproduces
+   every number (jupyter isn't in requirements.txt — uncomment/add when needed), then a
+   combined ~2-page report per references/report-style.md.
 
 ## Fresh-container notes
 
 - `pip install -r requirements.txt && pip install -e .`
-- A fresh clone has `ccs.csv` (committed) but NOT the two big CSVs: run `make fetch`
-  (needs the Drive folder link-shared — ask Lauren to re-share if it 403s), then
-  `make cache`. Cloud sessions need `drive.google.com` and `drive.usercontent.google.com`
-  on the environment's allowed domains (the original environment has both).
-- Commits: identity `Claude <noreply@anthropic.com>`; push to `origin main` of
-  `alsoknownaslj/oscar-case-study-2` works (verified 2026-11-01).
-- `/fill-blanks`, `/retro`, `/remember` and the humanize hooks register only in sessions
-  opened on this repo.
+- `make fetch` (needs Drive link-sharing + the two Drive domains allowed — both held on
+  2026-11-01), `make cache`; `make profile` only to re-verify.
+- Commits: identity `Claude <noreply@anthropic.com>`; branch names descriptive, never
+  `claude/...`; no PRs unless Lauren asks.
+- `/fill-blanks`, `/retro`, `/remember` + humanize hooks register in sessions on this repo.

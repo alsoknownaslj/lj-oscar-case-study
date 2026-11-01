@@ -33,3 +33,17 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
 - **2026-10-31** — `ccs_2_desc` is blank (empty string, not null) for exactly the 7,621
   Residual-chapter codes; `ccs_3_desc` never blank; `diag` unique. NDC: all 11-digit,
   leading zeros intact.
+- **2026-11-01** — Claims window correction: volume ramps from **2015-09**, not 2015-12
+  (monthly counts: Jan–Aug 2015 total ≈163 rows, Sep 6,365 → Oct 18,895 → Nov 26,906 →
+  Dec 35,647; peak 2016). CLAUDE.md + dictionary updated. Verified via duckdb monthly counts.
+- **2026-11-01** — Exact cleaning numbers: 24 null dates + **38** pre-2015 rows (docs said
+  ~37) = 62 excluded; exactly **one member** (M0061560, single claim dated 2014-08-08)
+  drops out — and they have 11 rx fills, so the both-tables overlap reads **194,289**
+  after cleaning vs the documented raw 194,290.
+- **2026-11-01** — Top unmapped codes (after cleaning): `99999` **1,561 rows**, `KHDX`
+  103, `000` 61 (63 raw; 2 of the 63 also carry null/pre-window dates). 217 distinct
+  unmapped codes confirmed exactly. `99999`/`KHDX` were previously undocumented.
+- **2026-11-01** — Profiling trap confirmed with numbers: the Symptoms/Z-code chapter is
+  18.1% of kept claim rows, and its "Factors influencing health care" category alone
+  touches **53.9% of members** — left in, it would be the #1 "condition" (2× respiratory
+  infections). Residual chapter: 1.6% of rows. Both bucketed out of condition flags.
