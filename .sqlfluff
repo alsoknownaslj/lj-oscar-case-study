@@ -1,7 +1,16 @@
 [sqlfluff]
 dialect = duckdb
-templater = raw
+# placeholder templater so duckdb named parameters ($window_start, ...) lex cleanly
+templater = placeholder
 max_line_length = 100
+
+[sqlfluff:templater:placeholder]
+param_style = dollar
+window_start = '2015-01-01'
+symptoms_chapter = 'symptoms'
+residual_chapter = 'residual'
+chronic_min_dates = 2
+chronic_min_span_days = 30
 
 [sqlfluff:indentation]
 tab_space_size = 4
