@@ -32,3 +32,11 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   accuracy) stay in CLAUDE.md's common-mistakes list; the retired skill's fuller text
   lives on in the original repo if ever needed. `healthcare-claims` and `humanize` stay.
   No analysis or modeling work existed yet, so there was nothing to strip.
+- **2026-11-01 — Humanize moved from convention to hooks (Lauren).** Two hooks in
+  `.claude/settings.json`: SessionStart prints the humanize rule into context on every
+  start/resume/clear/compact (so it survives compaction), and PostToolUse on Write|Edit
+  nudges the moment a human-facing `.md` lands (memory/, data/ and .claude/ excluded —
+  internal logs don't get the pass). Lauren asking for a hook outright supersedes the
+  2026-10-31 hesitation about SessionStart hooks. Rejected: a blocking Stop hook (can't
+  reliably tell whether prose was written → false blocks) and UserPromptSubmit injection
+  (repeats the rule every turn for no gain).

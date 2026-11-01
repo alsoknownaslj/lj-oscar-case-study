@@ -154,7 +154,8 @@ referenced relatively). Default skeleton (details + taste: `references/report-st
 Hard rules: every figure follows the `dataviz` skill; every number traceable to a script or
 notebook committed in the same state; member-level rows never appear in a report. **Every
 report gets a `humanize` pass before it's called done** — Lauren's reports should sound
-like Lauren, not like a model.
+like Lauren, not like a model. This is hook-enforced: `.claude/hooks/` injects the rule at
+every session start and nudges after every prose write (`.claude/settings.json`).
 
 Lauren's calls (2026-10-31): audience = **Oscar reviewers, private**. Format of record =
 **markdown report + supporting notebook** (the report is what gets read; the notebook
