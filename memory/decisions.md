@@ -47,3 +47,8 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   sessions that write PR bodies themselves. Rejected: a PreToolUse hook rewriting PR
   bodies — the attribution setting is the switch Claude Code actually honors, and body
   rewriting across the several PR-creating tools is fragile. Commit trailers unchanged.
+- **2026-11-01 — History reset (Lauren).** `main` was rebuilt to start at the split: one
+  root commit holding the repo's starting state, then the post-split commits (humanize
+  hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split
+  history lives only in `oscar-case-study`. The "full-history duplicate" wording in the
+  2026-11-01 duplication entry described the state before this reset.

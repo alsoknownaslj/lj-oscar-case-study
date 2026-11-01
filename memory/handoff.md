@@ -8,8 +8,10 @@ It is the baton: the next session reads it before doing anything._
 ## Where things stand
 
 This repo, `alsoknownaslj/oscar-case-study-2`, is the project of record now. It is a
-full-history duplicate of `alsoknownaslj/oscar-case-study` (left untouched) with three
-changes Lauren asked for on 2026-11-01:
+duplicate of `alsoknownaslj/oscar-case-study` (left untouched) with three changes Lauren
+asked for on 2026-11-01. Git history here starts at the split: one root commit with the
+starting state, then the post-split work; pre-split history lives only in the original
+repo. The changes:
 
 - The repo-local `ml-classification` skill is gone. Generic DS mechanics — EDA, SQL,
   stats, viz, modeling — all come from Anthropic's `data` plugin; see the routing table
