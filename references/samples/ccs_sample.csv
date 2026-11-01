@@ -1,0 +1,401 @@
+diag,diag_desc,ccs_1_desc,ccs_2_desc,ccs_3_desc
+A000,"Cholera due to Vibrio cholerae 01, biovar cholerae",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A001,"Cholera due to Vibrio cholerae 01, biovar eltor",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A009,"Cholera, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0100,"Typhoid fever, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0101,Typhoid meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A0102,Typhoid fever with heart involvement,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A0103,Typhoid pneumonia,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A0104,Typhoid arthritis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A0105,Typhoid osteomyelitis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A0109,Typhoid fever with other complications,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A011,Paratyphoid fever A,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A012,Paratyphoid fever B,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A013,Paratyphoid fever C,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A014,"Paratyphoid fever, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A020,Salmonella enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A021,Salmonella sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A0220,"Localized salmonella infection, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0221,Salmonella meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A0222,Salmonella pneumonia,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A0223,Salmonella arthritis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A0224,Salmonella osteomyelitis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A0225,Salmonella pyelonephritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0229,Salmonella with other localized infection,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A028,Other specified salmonella infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A029,"Salmonella infection, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A030,Shigellosis due to Shigella dysenteriae,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A031,Shigellosis due to Shigella flexneri,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A032,Shigellosis due to Shigella boydii,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A033,Shigellosis due to Shigella sonnei,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A038,Other shigellosis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A039,"Shigellosis, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A040,Enteropathogenic Escherichia coli infection,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A041,Enterotoxigenic Escherichia coli infection,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A042,Enteroinvasive Escherichia coli infection,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A043,Enterohemorrhagic Escherichia coli infection,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A044,Other intestinal Escherichia coli infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A045,Campylobacter enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A046,Enteritis due to Yersinia enterocolitica,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A047,Enterocolitis due to Clostridium difficile,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0471,"Enterocolitis due to Clostridium difficile, recurrent",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0472,"Enterocolitis d/t Clostridium difficile, not spcf as recur",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A048,Other specified bacterial intestinal infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A049,"Bacterial intestinal infection, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A050,Foodborne staphylococcal intoxication,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A051,Botulism food poisoning,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A052,Foodborne Clostridium perfringens intoxication,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A053,Foodborne Vibrio parahaemolyticus intoxication,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A054,Foodborne Bacillus cereus intoxication,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A055,Foodborne Vibrio vulnificus intoxication,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A058,Other specified bacterial foodborne intoxications,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A059,"Bacterial foodborne intoxication, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A060,Acute amebic dysentery,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A061,Chronic intestinal amebiasis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A062,Amebic nondysenteric colitis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A063,Ameboma of intestine,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A064,Amebic liver abscess,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A065,Amebic lung abscess,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A066,Amebic brain abscess,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A067,Cutaneous amebiasis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0681,Amebic cystitis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0682,Other amebic genitourinary infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0689,Other amebic infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A069,"Amebiasis, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A070,Balantidiasis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A071,Giardiasis [lambliasis],Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A072,Cryptosporidiosis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A073,Isosporiasis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A074,Cyclosporiasis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A078,Other specified protozoal intestinal diseases,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A079,"Protozoal intestinal disease, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A080,Rotaviral enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0811,Acute gastroenteropathy due to Norwalk agent,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0819,Acute gastroenteropathy due to other small round viruses,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A082,Adenoviral enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0831,Calicivirus enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0832,Astrovirus enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A0839,Other viral enteritis,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A084,"Viral intestinal infection, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A088,Other specified intestinal infections,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A09,"Infectious gastroenteritis and colitis, unspecified",Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A150,Tuberculosis of lung,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A154,Tuberculosis of intrathoracic lymph nodes,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A155,"Tuberculosis of larynx, trachea and bronchus",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A156,Tuberculous pleurisy,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A157,Primary respiratory tuberculosis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A158,Other respiratory tuberculosis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A159,Respiratory tuberculosis unspecified,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A170,Tuberculous meningitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A171,Meningeal tuberculoma,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1781,Tuberculoma of brain and spinal cord,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1782,Tuberculous meningoencephalitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1783,Tuberculous neuritis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1789,Other tuberculosis of nervous system,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A179,"Tuberculosis of nervous system, unspecified",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1801,Tuberculosis of spine,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1802,Tuberculous arthritis of other joints,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1803,Tuberculosis of other bones,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1809,Other musculoskeletal tuberculosis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1810,"Tuberculosis of genitourinary system, unspecified",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1811,Tuberculosis of kidney and ureter,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1812,Tuberculosis of bladder,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1813,Tuberculosis of other urinary organs,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1814,Tuberculosis of prostate,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1815,Tuberculosis of other male genital organs,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1816,Tuberculosis of cervix,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1817,Tuberculous female pelvic inflammatory disease,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1818,Tuberculosis of other female genital organs,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A182,Tuberculous peripheral lymphadenopathy,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1831,Tuberculous peritonitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1832,Tuberculous enteritis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1839,Retroperitoneal tuberculosis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A184,Tuberculosis of skin and subcutaneous tissue,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1850,"Tuberculosis of eye, unspecified",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1851,Tuberculous episcleritis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1852,Tuberculous keratitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1853,Tuberculous chorioretinitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1854,Tuberculous iridocyclitis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1859,Other tuberculosis of eye,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A186,Tuberculosis of (inner) (middle) ear,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A187,Tuberculosis of adrenal glands,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1881,Tuberculosis of thyroid gland,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1882,Tuberculosis of other endocrine glands,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1883,"Tuberculosis of digestive tract organs, NEC",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1884,Tuberculosis of heart,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1885,Tuberculosis of spleen,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A1889,Tuberculosis of other sites,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A190,Acute miliary tuberculosis of a single specified site,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A191,Acute miliary tuberculosis of multiple sites,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A192,"Acute miliary tuberculosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A198,Other miliary tuberculosis,Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A199,"Miliary tuberculosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Tuberculosis
+A200,Bubonic plague,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A201,Cellulocutaneous plague,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A202,Pneumonic plague,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A203,Plague meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A207,Septicemic plague,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A208,Other forms of plague,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A209,"Plague, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A210,Ulceroglandular tularemia,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A211,Oculoglandular tularemia,Diseases of the nervous system and sense organs,Eye disorders,Inflammation; infection of eye (except that caused by tuberculosis or sexually transmitteddisease)
+A212,Pulmonary tularemia,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A213,Gastrointestinal tularemia,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A217,Generalized tularemia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A218,Other forms of tularemia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A219,"Tularemia, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A220,Cutaneous anthrax,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A221,Pulmonary anthrax,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A222,Gastrointestinal anthrax,Diseases of the digestive system,Intestinal infection [135.],Intestinal infection
+A227,Anthrax sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A228,Other forms of anthrax,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A229,"Anthrax, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A230,Brucellosis due to Brucella melitensis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A231,Brucellosis due to Brucella abortus,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A232,Brucellosis due to Brucella suis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A233,Brucellosis due to Brucella canis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A238,Other brucellosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A239,"Brucellosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A240,Glanders,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A241,Acute and fulminating melioidosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A242,Subacute and chronic melioidosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A243,Other melioidosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A249,"Melioidosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A250,Spirillosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A251,Streptobacillosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A259,"Rat-bite fever, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A260,Cutaneous erysipeloid,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A267,Erysipelothrix sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A268,Other forms of erysipeloid,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A269,"Erysipeloid, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A270,Leptospirosis icterohemorrhagica,Infectious and parasitic diseases,Other infections; including parasitic [8.],Other infections; including parasitic
+A2781,Aseptic meningitis in leptospirosis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A2789,Other forms of leptospirosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A279,"Leptospirosis, unspecified",Infectious and parasitic diseases,Other infections; including parasitic [8.],Other infections; including parasitic
+A280,Pasteurellosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A281,Cat-scratch disease,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A282,Extraintestinal yersiniosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A288,"Oth zoonotic bacterial diseases, not elsewhere classified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A289,"Zoonotic bacterial disease, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A300,Indeterminate leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A301,Tuberculoid leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A302,Borderline tuberculoid leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A303,Borderline leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A304,Borderline lepromatous leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A305,Lepromatous leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A308,Other forms of leprosy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A309,"Leprosy, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A310,Pulmonary mycobacterial infection,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A311,Cutaneous mycobacterial infection,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A312,Dissem mycobacterium avium-intracellulare complex (DMAC),Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A318,Other mycobacterial infections,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A319,"Mycobacterial infection, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A320,Cutaneous listeriosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3211,Listerial meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A3212,Listerial meningoencephalitis,Diseases of the nervous system and sense organs,Central nervous system infection,Encephalitis (except that caused by tuberculosis or sexually transmitted disease)
+A327,Listerial sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A3281,Oculoglandular listeriosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3282,Listerial endocarditis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3289,Other forms of listeriosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A329,"Listeriosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A33,Tetanus neonatorum,Certain conditions originating in the perinatal period,Other perinatal conditions [224.],Other perinatal conditions
+A34,Obstetrical tetanus,Complications of pregnancy; childbirth; and the puerperium,Other complications of birth; puerperium affecting management of mother [195.],Other complications of birth; puerperium affecting management of mother
+A35,Other tetanus,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A360,Pharyngeal diphtheria,Diseases of the respiratory system,Respiratory infections,Other upper respiratory infections
+A361,Nasopharyngeal diphtheria,Diseases of the respiratory system,Respiratory infections,Other upper respiratory infections
+A362,Laryngeal diphtheria,Diseases of the respiratory system,Respiratory infections,Other upper respiratory infections
+A363,Cutaneous diphtheria,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A3681,Diphtheritic cardiomyopathy,Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A3682,Diphtheritic radiculomyelitis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3683,Diphtheritic polyneuritis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3684,Diphtheritic tubulo-interstitial nephropathy,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3685,Diphtheritic cystitis,Diseases of the genitourinary system,Diseases of the urinary system,Urinary tract infections
+A3686,Diphtheritic conjunctivitis,Diseases of the nervous system and sense organs,Eye disorders,Inflammation; infection of eye (except that caused by tuberculosis or sexually transmitteddisease)
+A3689,Other diphtheritic complications,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A369,"Diphtheria, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3700,Whooping cough due to Bordetella pertussis without pneumonia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3701,Whooping cough due to Bordetella pertussis with pneumonia,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A3710,Whooping cough due to Bordetella parapertussis w/o pneumonia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3711,Whooping cough due to Bordetella parapertussis w pneumonia,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A3780,Whooping cough due to other Bordetella species w/o pneumonia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3781,Whooping cough due to oth Bordetella species with pneumonia,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3790,"Whooping cough, unspecified species without pneumonia",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3791,"Whooping cough, unspecified species with pneumonia",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A380,Scarlet fever with otitis media,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A381,Scarlet fever with myocarditis,Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A388,Scarlet fever with other complications,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A389,"Scarlet fever, uncomplicated",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A390,Meningococcal meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A391,Waterhouse-Friderichsen syndrome,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A392,Acute meningococcemia,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A393,Chronic meningococcemia,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A394,"Meningococcemia, unspecified",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A3950,"Meningococcal carditis, unspecified",Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A3951,Meningococcal endocarditis,Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A3952,Meningococcal myocarditis,Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A3953,Meningococcal pericarditis,Diseases of the circulatory system,Diseases of the heart,Peri-; endo-; and myocarditis; cardiomyopathy (except that caused by tuberculosis or sexually transmitted disease)
+A3981,Meningococcal encephalitis,Diseases of the nervous system and sense organs,Central nervous system infection,Encephalitis (except that caused by tuberculosis or sexually transmitted disease)
+A3982,Meningococcal retrobulbar neuritis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A3983,Meningococcal arthritis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A3984,Postmeningococcal arthritis,Diseases of the musculoskeletal system and connective tissue,Infective arthritis and osteomyelitis (except that caused by TB or STD) [201.],Infective arthritis and osteomyelitis (except that caused by tuberculosis or sexually transmitted disease)
+A3989,Other meningococcal infections,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A399,"Meningococcal infection, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A400,"Sepsis due to streptococcus, group A",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A401,"Sepsis due to streptococcus, group B",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A403,Sepsis due to Streptococcus pneumoniae,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A408,Other streptococcal sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A409,"Streptococcal sepsis, unspecified",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4101,Sepsis due to Methicillin susceptible Staphylococcus aureus,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4102,Sepsis due to Methicillin resistant Staphylococcus aureus,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A411,Sepsis due to other specified staphylococcus,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A412,Sepsis due to unspecified staphylococcus,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A413,Sepsis due to Hemophilus influenzae,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A414,Sepsis due to anaerobes,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4150,"Gram-negative sepsis, unspecified",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4151,Sepsis due to Escherichia coli [E. coli],Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4152,Sepsis due to Pseudomonas,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4153,Sepsis due to Serratia,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4159,Other Gram-negative sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4181,Sepsis due to Enterococcus,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4189,Other specified sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A419,"Sepsis, unspecified organism",Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A420,Pulmonary actinomycosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A421,Abdominal actinomycosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A422,Cervicofacial actinomycosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A427,Actinomycotic sepsis,Infectious and parasitic diseases,Bacterial infection,Septicemia (except in labor)
+A4281,Actinomycotic meningitis,Diseases of the nervous system and sense organs,Central nervous system infection,Meningitis (except that caused by tuberculosis or sexually transmitted disease)
+A4282,Actinomycotic encephalitis,Diseases of the nervous system and sense organs,Central nervous system infection,Encephalitis (except that caused by tuberculosis or sexually transmitted disease)
+A4289,Other forms of actinomycosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A429,"Actinomycosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A430,Pulmonary nocardiosis,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A431,Cutaneous nocardiosis,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A438,Other forms of nocardiosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A439,"Nocardiosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A440,Systemic bartonellosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A441,Cutaneous and mucocutaneous bartonellosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A448,Other forms of bartonellosis,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A449,"Bartonellosis, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A46,Erysipelas,Diseases of the skin and subcutaneous tissue,Skin and subcutaneous tissue infections [197.],Skin and subcutaneous tissue infections
+A480,Gas gangrene,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A481,Legionnaires' disease,Diseases of the respiratory system,Respiratory infections,Pneumonia (except that caused by tuberculosis or sexually transmitted disease)
+A482,Nonpneumonic Legionnaires' disease [Pontiac fever],Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A483,Toxic shock syndrome,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A484,Brazilian purpuric fever,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A4851,Infant botulism,Certain conditions originating in the perinatal period,Other perinatal conditions [224.],Other perinatal conditions
+A4852,Wound botulism,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A488,Other specified bacterial diseases,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A4901,"Methicillin suscep staph infection, unsp site",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A4902,"Methicillin resis staph infection, unsp site",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A491,"Streptococcal infection, unspecified site",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A492,"Hemophilus influenzae infection, unspecified site",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A493,"Mycoplasma infection, unspecified site",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A498,Other bacterial infections of unspecified site,Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A499,"Bacterial infection, unspecified",Infectious and parasitic diseases,Bacterial infection,Bacterial infection; unspecified site
+A5001,Early congenital syphilitic oculopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5002,Early congenital syphilitic osteochondropathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5003,Early congenital syphilitic pharyngitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5004,Early congenital syphilitic pneumonia,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5005,Early congenital syphilitic rhinitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5006,Early cutaneous congenital syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5007,Early mucocutaneous congenital syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5008,Early visceral congenital syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5009,"Other early congenital syphilis, symptomatic",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A501,"Early congenital syphilis, latent",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A502,"Early congenital syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5030,"Late congenital syphilitic oculopathy, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5031,Late congenital syphilitic interstitial keratitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5032,Late congenital syphilitic chorioretinitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5039,Other late congenital syphilitic oculopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5040,"Late congenital neurosyphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5041,Late congenital syphilitic meningitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5042,Late congenital syphilitic encephalitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5043,Late congenital syphilitic polyneuropathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5044,Late congenital syphilitic optic nerve atrophy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5045,Juvenile general paresis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5049,Other late congenital neurosyphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5051,Clutton's joints,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5052,Hutchinson's teeth,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5053,Hutchinson's triad,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5054,Late congenital cardiovascular syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5055,Late congenital syphilitic arthropathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5056,Late congenital syphilitic osteochondropathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5057,Syphilitic saddle nose,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5059,"Other late congenital syphilis, symptomatic",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A506,"Late congenital syphilis, latent",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A507,"Late congenital syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A509,"Congenital syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A510,Primary genital syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A511,Primary anal syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A512,Primary syphilis of other sites,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5131,Condyloma latum,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5132,Syphilitic alopecia,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5139,Other secondary syphilis of skin,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5141,Secondary syphilitic meningitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5142,Secondary syphilitic female pelvic disease,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5143,Secondary syphilitic oculopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5144,Secondary syphilitic nephritis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5145,Secondary syphilitic hepatitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5146,Secondary syphilitic osteopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5149,Other secondary syphilitic conditions,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A515,"Early syphilis, latent",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A519,"Early syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5200,"Cardiovascular syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5201,Syphilitic aneurysm of aorta,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5202,Syphilitic aortitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5203,Syphilitic endocarditis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5204,Syphilitic cerebral arteritis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5205,Other cerebrovascular syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5206,Other syphilitic heart involvement,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5209,Other cardiovascular syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5210,"Symptomatic neurosyphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5211,Tabes dorsalis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5212,Other cerebrospinal syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5213,Late syphilitic meningitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5214,Late syphilitic encephalitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5215,Late syphilitic neuropathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5216,Charcot's arthropathy (tabetic),Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5217,General paresis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5219,Other symptomatic neurosyphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A522,Asymptomatic neurosyphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A523,"Neurosyphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5271,Late syphilitic oculopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5272,Syphilis of lung and bronchus,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5273,Symptomatic late syphilis of other respiratory organs,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5274,Syphilis of liver and other viscera,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5275,Syphilis of kidney and ureter,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5276,Other genitourinary symptomatic late syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5277,Syphilis of bone and joint,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5278,Syphilis of other musculoskeletal tissue,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5279,Other symptomatic late syphilis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A528,"Late syphilis, latent",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A529,"Late syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A530,"Latent syphilis, unspecified as early or late",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A539,"Syphilis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5400,"Gonococcal infection of lower genitourinary tract, unsp",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5401,"Gonococcal cystitis and urethritis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5402,"Gonococcal vulvovaginitis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5403,"Gonococcal cervicitis, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5409,Other gonococcal infection of lower genitourinary tract,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A541,Gonocl infct of lower GU tract w periureth and acc glnd abcs,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5421,Gonococcal infection of kidney and ureter,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5422,Gonococcal prostatitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5423,Gonococcal infection of other male genital organs,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5424,Gonococcal female pelvic inflammatory disease,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5429,Other gonococcal genitourinary infections,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5430,"Gonococcal infection of eye, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5431,Gonococcal conjunctivitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5432,Gonococcal iridocyclitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5433,Gonococcal keratitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5439,Other gonococcal eye infection,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5440,"Gonococcal infection of musculoskeletal system, unspecified",Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5441,Gonococcal spondylopathy,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5442,Gonococcal arthritis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5443,Gonococcal osteomyelitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5449,Gonococcal infection of other musculoskeletal tissue,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A545,Gonococcal pharyngitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A546,Gonococcal infection of anus and rectum,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5481,Gonococcal meningitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5482,Gonococcal brain abscess,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5483,Gonococcal heart infection,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5484,Gonococcal pneumonia,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)
+A5485,Gonococcal peritonitis,Infectious and parasitic diseases,Bacterial infection,Sexually transmitted infections (not HIV or hepatitis)

@@ -1,0 +1,39 @@
+[project]
+name = "oscar-cs"
+version = "0.1.0"
+description = "Oscar Health DS case study: member health status from claims + rx data"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "pyarrow>=15",
+    "duckdb>=1.0",
+    "scikit-learn>=1.4",
+    "matplotlib>=3.8",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+extend-exclude = ["notebooks"]
+
+[tool.ruff.lint]
+select = [
+    "E", "W",   # pycodestyle
+    "F",        # pyflakes
+    "I",        # isort
+    "UP",       # pyupgrade
+    "B",        # bugbear
+    "SIM",      # simplify
+    "PD",       # pandas-vet
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

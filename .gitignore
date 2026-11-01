@@ -1,0 +1,29 @@
+# data: raw and derived stay local (GitHub 100MB limit; see CLAUDE.md "Base tables")
+data/raw/*
+!data/raw/README.md
+!data/raw/ccs.csv
+data/cache/*
+!data/cache/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+build/
+dist/
+
+# duckdb scratch databases
+*.duckdb
+*.duckdb.wal
+
+# os / editor
+.DS_Store
+.vscode/
+.idea/

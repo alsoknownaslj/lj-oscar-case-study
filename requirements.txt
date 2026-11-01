@@ -1,0 +1,20 @@
+# core analysis stack
+pandas>=2.2
+pyarrow>=15
+duckdb>=1.0
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+
+# data fetching fallback (primary path is curl; see scripts/fetch_data.py)
+gdown>=5.1
+
+# code tidiness
+ruff>=0.6
+sqlfluff>=3.0
+
+# tests
+pytest>=8.0
+
+# optional: notebooks (uncomment if you work in Jupyter locally)
+# jupyterlab>=4.0
