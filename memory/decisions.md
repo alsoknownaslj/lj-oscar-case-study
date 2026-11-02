@@ -63,3 +63,15 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   coarse) and level 3 (too sparse). Full justification + numbers:
   reports/2026-11-01_health-status-characterization.md. Per Lauren's 2026-10-31 call the
   framing was to be proposed during analysis — this is that proposal, open to reopening.
+- **2026-11-02 — Canonical analysis window (Lauren): [2015-09-01, 2018-06-04], both
+  tables.** One uniform time frame for all cross-table and population statistics, set to
+  the intersection of real coverage (claims start 2015-09; both feeds taper out Apr–May
+  2018 — the 2018-12 claims "end" is 6 stray rows, found while pricing this decision).
+  Constants: `ANALYSIS_WINDOW_START/END` in src/oscar_cs/health_status.py. Price: claims
+  lose 231 rows / 15 members; rx loses 311,585 pre-window fills (10.4%) / 10,322 members;
+  in-window universe 282,734 (192,830 both, 52,321 claims-only, 37,583 rx-only).
+  Pre-window rx may be used only as explicitly labeled history features, never silently.
+  Caveat attached: Apr–May 2018 is taper-thin in both tables — partial coverage for
+  recency-sensitive measures. Rejected: left-edge-only alignment (keeps a phantom
+  rx-less claims tail that turned out to be 6 rows); per-analysis ad-hoc windows (the
+  drift we were already accumulating).

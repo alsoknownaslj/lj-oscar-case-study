@@ -68,8 +68,9 @@ No true nulls. `src/oscar_cs/data.py::parse_ccs2_code` extracts the bracket code
 
 One row = one diagnosis × member × day. Columns: `record_id` (unique int 1…1,919,983),
 `member_id` (str, `M0000001`-style, **245,166 distinct**), `date_svc` (date — **24 nulls,
-38 dirty rows back to 1899**; real window **2015-09 → 2018-12** (Jan–Aug 2015 holds only
-~160 rows; volume ramps from 2015-09 and peaks 2016)),
+38 dirty rows back to 1899**; real window **2015-09 → 2018-05** (Jan–Aug 2015 holds only
+~160 rows; ramps from 2015-09, peaks 2016, tapers out Apr–May 2018; the 2018-12-06 max is
+**6 stray rows** after 2018-06-04)),
 `diag1` (ICD-10, **91.9% dotted** e.g. `N92.6`; junk includes 63× `000` and one quoted
 comma code `"L02.,821"`). The file has quoted fields deep inside — every reader must set
 `quote='"'` (auto-sniffing sees none in the first 20k rows and breaks at row 1,783,434).
@@ -78,7 +79,8 @@ comma code `"L02.,821"`). The file has quoted fields deep inside — every reade
 
 One row = one fill. Columns: `record_id` (unique, up to 19 digits — keep as str, never
 float), `member_id` (**240,735 distinct**), `date_svc` (**2013-12 → 2018-06** — starts
-before and ends 6 months before the claims window), `ndc` (str, all 11-digit, leading
+~21 months before claims coverage; both tables taper out together over Apr–May 2018),
+`ndc` (str, all 11-digit, leading
 zeros real: `00002143301`), plus the feature hierarchy `drug_category` (90) →
 `drug_group` (477) → `drug_class` (684). Query via duckdb or the parquet cache, never
 repeated raw `pd.read_csv`.
@@ -120,10 +122,13 @@ Loading rules (enforced by `src/oscar_cs/data.py` — use it, don't hand-roll re
 7. **Choosing the wrong CCS granularity.** Level 1 (18 chapters) may be too coarse to be
    useful; level 3 too sparse. Justify the level you characterize members at; parse the
    level-2 bracket codes rather than string-matching long descriptions.
-8. **Ignoring the time dimension.** The windows don't even match: claims run **2015-09 →
-   2018-12**, prescriptions **2013-12 → 2018-06**. State the observation window for labels
-   vs. features (same-period inference and prospective prediction are different claims and
-   different splits), and don't let the rx-less final 6 months of claims bias labels.
+8. **Ignoring the time dimension.** Rx starts 2013-12 but claims only 2015-09 (10.4% of
+   fills are claims-blind), and BOTH feeds taper out over Apr–May 2018 — the "claims to
+   2018-12" tail is 6 stray rows. Cross-table and population stats use the canonical
+   window **2015-09-01 → 2018-06-04** (`ANALYSIS_WINDOW_*` in
+   `src/oscar_cs/health_status.py`); treat Apr–May 2018 as partial coverage for
+   recency-sensitive measures, and state the observation window for labels vs. features
+   (same-period inference and prospective prediction are different claims and splits).
 9. **Row-counting instead of member-counting.** Utilization tables are long; "X% of rows"
    and "X% of members" diverge wildly. Default denominators to members unless stated.
 10. **Pandas 3.0 surprises.** This repo pins pandas ≥ 3: strings are `str` dtype by

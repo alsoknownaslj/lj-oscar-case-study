@@ -30,7 +30,7 @@ strings). One row = one diagnosis × member × service date.
 |---|---|---|
 | `record_id` | int (load as str ok) | unique row id |
 | `member_id` | str | `M0000001` … `M0291613` |
-| `date_svc` | date | **24 rows null; 38 stray rows 1899–2014** (sentinel/dirty); real window **2015-09 → 2018-12** (Jan–Aug 2015 holds only ≈160 rows, ramp starts 2015-09, peak 2016) |
+| `date_svc` | date | **24 rows null; 38 stray rows 1899–2014** (sentinel/dirty); real window **2015-09 → 2018-05** (Jan–Aug 2015 ≈160 rows; tapers Apr–May 2018; the 2018-12-06 max is 6 stray rows) |
 | `diag1` | str | ICD-10, **91.9% dotted** (`N92.6`); 63 rows of junk code `000`; 1 row with an embedded comma (`L02.,821`, CSV-quoted); 507 legit undotted >3-char codes |
 
 Join: `normalize_icd10(diag1)` → `ccs.diag` covers **99.89% of rows** (19,845 of 20,062
@@ -46,7 +46,7 @@ always parse with `quote='"'` (duckdb's auto-detection sniffs only early rows).
 |---|---|---|
 | `record_id` | str | unique, up to 19 digits — never cast to float |
 | `member_id` | str | same scheme as claims |
-| `date_svc` | date | window **2013-12 → 2018-06**: starts ~2 years before claims ramp up and ends **6 months before claims end** — align windows explicitly when labeling |
+| `date_svc` | date | window **2013-12 → 2018-06**: starts ~21 months before claims coverage; **both tables taper out together Apr–May 2018** — canonical analysis window is 2015-09-01 → 2018-06-04 |
 | `ndc` | str | all 11-digit, leading zeros present (`00002143301`) |
 | `drug_category` | str | 90 values (coarse) |
 | `drug_group` | str | 477 values |

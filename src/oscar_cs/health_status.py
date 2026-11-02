@@ -20,6 +20,14 @@ import pandas as pd
 # null dates (24 rows) are excluded too. Both exclusions are counted, never silent.
 CLAIMS_WINDOW_START = dt.date(2015, 1, 1)
 
+# Canonical cross-table analysis window (Lauren, 2026-11-02): the intersection of the two
+# tables' real coverage. Rx reaches back to 2013-12 (left-censored vs claims, 10.4% of
+# fills) and BOTH feeds taper out together over Apr-May 2018 - the claims max of
+# 2018-12-06 is 6 stray rows, not coverage. Population and linkage stats use this window;
+# pre-window rx may serve only as explicitly labeled history, never silently.
+ANALYSIS_WINDOW_START = dt.date(2015, 9, 1)
+ANALYSIS_WINDOW_END = dt.date(2018, 6, 4)
+
 # Chronic rule (healthcare-claims skill): a condition is chronic for a member when it is
 # coded on >=2 distinct claim dates spanning >=30 days. A single date, or a tight cluster
 # of dates, reads as a one-off/acute episode instead — the condition still counts.

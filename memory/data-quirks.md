@@ -88,3 +88,14 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   #1, plus antihypertensives, antidiabetics (2,409 members), anticonvulsants, thyroid.
   (Counted 46,446 rx-only here vs 46,445: M0061560's single claim is pre-2015.) Also
   10.4% of all fills predate claims coverage entirely (before 2015-09) — left-censored.
+- **2026-11-02** — The "claims run to 2018-12" end was a max-date mirage like the 1899 min:
+  only **6 stray claim rows** sit after 2018-06-04, and BOTH feeds taper out together
+  (claims Mar 118k → Apr 68k → May 15k, last dense date 2018-05-26; rx Mar 173k → Apr
+  141k → May 58k → 632 June fills through 06-04). The only real coverage mismatch is the
+  LEFT edge (rx reaches back to 2013-12; 10.4% of fills pre-date claims). Docs corrected
+  (CLAUDE.md base tables + mistake 8, data dictionary).
+- **2026-11-02** — Canonical window [2015-09-01, 2018-06-04] prices out as: claims lose
+  231 rows (0.012%) and 15 members; rx loses 311,585 fills (10.4%) and 10,322 members
+  (their fills are all pre-window). In-window populations: **282,734 union = 192,830 both
+  / 52,321 claims-only / 37,583 rx-only**; 8,877 of the 291,611 universe have no event
+  inside the window at all.
