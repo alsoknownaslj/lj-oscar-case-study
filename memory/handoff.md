@@ -3,7 +3,7 @@
 _Rewrite this file whole (never append) at the end of a session or when direction changes.
 It is the baton: the next session reads it before doing anything._
 
-**As of 2026-11-02 (IDE-SQL session).**
+**As of 2026-11-02 (soul.md session).**
 
 ## Where things stand
 
@@ -11,21 +11,17 @@ This repo, `alsoknownaslj/oscar-case-study-2`, is the project of record (split o
 `alsoknownaslj/oscar-case-study` on 2026-11-01; pre-split history lives only there).
 **No analysis or modeling has been done** and Lauren's 72-hour window is still NOT open.
 
-New since the split: Lauren wants to run the project's SQL from a db extension in
-VS Code, so the `make db` setup from `oscar-case-study` commit 48ddedb is ported here
-(branch `vscode-sqltools-db`):
+The IDE-SQL work is merged to `main`: `make db` writes a self-contained
+`data/oscar.duckdb` (storage v1.0.0 so the SQLTools driver's duckdb 1.3.2 opens it),
+`sql/models/` holds the four plumbing views, `oscar_cs.db.connect()` loads them in layer
+order. `dim_members`/`fct_*` stay unported — framing is not pre-committed
+(memory/decisions.md 2026-11-02).
 
-- `make db` → `scripts/build_db.py` writes a self-contained `data/oscar.duckdb`
-  (base tables copied in, `sql/models/` views created inside, no file paths), at
-  `storage_version 'v1.0.0'` so the SQLTools driver's bundled duckdb 1.3.2 can open it.
-  Verified by opening with duckdb 1.3.2 and running every view.
-- `sql/models/` now holds the four plumbing views (`stg_ccs`, `stg_claim_lines`,
-  `stg_prescription_drugs`, `int_claim_lines_ccs`); `oscar_cs.db.connect()` loads them
-  in layer order and `scripts/sql.py` uses it. The old repo's `dim_members`/`fct_*`
-  models were deliberately NOT ported — they carry analysis framing, and framing here
-  is still not pre-committed (see memory/decisions.md 2026-11-02).
-- `.vscode/extensions.json` committed (recommendations only); SQLTools connection is
-  added once via its UI — steps in CLAUDE.md under "Scripts & make targets".
+New this session (branch `agent-soul-md`, awaiting Lauren's review): `soul.md` at the
+repo root — who the analyst is (stance, evidence habits, voice), auto-imported by
+CLAUDE.md; CLAUDE.md remains the operational contract and wins on conflict. It carries
+two FILL-INs that are Lauren's to answer (a name for the pair; chat register) — collect
+with `/fill-blanks`.
 
 ## Next concrete step
 
@@ -51,6 +47,6 @@ mechanics come from `data:analyze` / `data:statistical-analysis`.
   `drive.google.com` and `drive.usercontent.google.com` on the allowed domains.
 - Container stack: Python 3.13, pandas 3.0.5, duckdb 2.0.0.
 - Commits: identity `Claude <noreply@anthropic.com>`; work lands on descriptive
-  branches (never `claude/...`), e.g. `vscode-sqltools-db`.
+  branches (never `claude/...`), e.g. `agent-soul-md`.
 - `/fill-blanks`, `/retro`, `/remember` and the humanize hooks register only in sessions
   opened on this repo.

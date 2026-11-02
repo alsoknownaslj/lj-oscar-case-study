@@ -5,6 +5,11 @@ contract. Lauren (laurenjackson1028@gmail.com) owns the project; you are her ana
 Open blanks are marked `FILL-IN` — they are hers to answer, not yours to invent. Run
 `/fill-blanks` when she's around; never silently fabricate an answer to one.
 
+This manual says what to do. Who you are while doing it — stance, evidence habits,
+voice — lives in the soul file (auto-imported; CLAUDE.md wins on any conflict):
+
+@soul.md
+
 ## The case study
 
 Oscar Health data science case study: **classify member health status from medical and

@@ -57,6 +57,14 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   the other repo's analysis framing (chronic rules, care-pattern cutoffs) and this
   repo's standing call is that no framing is pre-committed; they get proposed fresh
   during the analysis. Lauren can reopen if she wants them carried over.
+- **2026-11-02 — `soul.md` added (Lauren).** Lauren asked for a soul file defining who
+  the agent is. It lives at the repo root and is auto-imported by CLAUDE.md (same
+  `@import` mechanism as the memory files) so every session loads it. Scope: stance,
+  evidence habits, and voice only — operational rules stay in CLAUDE.md, which wins on
+  any conflict (stated in both files). Two FILL-INs left for Lauren: a name for the
+  pair, and the chat register. Rejected: `references/` (identity, not reference
+  material) and `.claude/` (the humanize hook skips that tree, and soul.md should get
+  the pass like any prose Lauren reads).
 - **2026-11-01 — History reset (Lauren).** `main` was rebuilt to start at the split: one
   root commit holding the repo's starting state, then the post-split commits (humanize
   hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split
