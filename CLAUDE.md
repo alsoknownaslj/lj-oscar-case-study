@@ -32,8 +32,8 @@ Context that shapes every decision:
 
 Status (Lauren, updated 2026-11-02): the 72-hour window is **open, deadline 5pm on
 2026-11-02 (Lauren's local time)**; this replaced the 2026-10-31 "not started" status.
-**No framing is pre-committed**: the definition of "health status" gets proposed and justified during the
-analysis itself. Deliverables are **private, for Oscar reviewers only**.
+**Health status v2 is ratified (2026-11-02)**: its rules live in `memory/decisions.md`;
+it replaced the earlier "no framing is pre-committed" stance. Deliverables are **private, for Oscar reviewers only**.
 
 ## Data status — read this first
 

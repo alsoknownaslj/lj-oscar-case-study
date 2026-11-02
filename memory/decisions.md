@@ -72,8 +72,8 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split
   history lives only in `oscar-case-study`. The "full-history duplicate" wording in the
   2026-11-01 duplication entry described the state before this reset.
-- **2026-11-01 — Requirement-1 health-status framing (proposed by session; Lauren to
-  ratify at report review).** Health status = per-member set of **CCS level-2 condition
+- **2026-11-01 — Requirement-1 health-status framing (proposed by session;
+  superseded 2026-11-02 by health status v2, below).** Health status = per-member set of **CCS level-2 condition
   flags**, each **chronic** (≥2 distinct claim dates ≥30 days apart, per the
   healthcare-claims skill rule) or **one-off**, plus light utilization counts; the
   Symptoms/Z-code and Residual chapters are tracked but never conditions; unmapped codes
@@ -108,3 +108,31 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   IQR/z-scores (IQR flags ~10% here); default to rank/quantile statistics; cap displays
   at p99 with explicit labels; flag >p99 members as high utilizers. Rejected: trimming,
   winsorizing analysis data, raw-scale IQR fences.
+- **2026-11-02 — Utilization tiers: head/tail breaks (Lauren).** Low/med/high for
+  diagnostic claim lines and for fills per member: cut at the mean of members with at
+  least one event, then cut the above-mean group at its own mean. Zero is its own bin on
+  both axes; the >p99 high-utilizer flag sits on top (outlier policy). Why: built for
+  heavy-tailed counts, the cuts are means so tied integers can't collapse a bin (the
+  quartile failure), and the tiers keep the data's pyramid shape. Rejected: Jenks /
+  1-D k-means on log volume (near-even tiers make "high" too broad), care-cadence cuts
+  (thresholds are judgment calls; enrollment is unobserved), mixture models (slowest,
+  and they chase the integer spikes at 1-3).
+- **2026-11-02 — Health status v2 (Lauren ratified).** Unit: member x CCS level-2
+  condition in the canonical window, plus dx/rx tiers and the >p99 flag. Not
+  conditions: Z-codes, immunizations/screening, unmapped codes (a counted bucket), and
+  the Residual chapter (kept out; Lauren didn't flag it). R-codes become their own
+  **symptoms** track: "symptoms that could mean something" (Lauren), so not conditions
+  but not discarded. Inside the CCS symptoms chapter the split is by first letter,
+  matching the EDA's R/Z definition (session call): Z -> excluded (250,060 in-window
+  rows); everything else -> symptoms (96,978 rows: R-codes in both of the chapter's
+  level-2s plus 17,609 rows of other letters CCS files as symptoms). Shapes from claim
+  dates: chronic = span >180d, ongoing or recurring (symptoms: "persistent"); episode =
+  2+ dates within 180d; one-off = one date. Reinfection trap: infections and injuries
+  that keep coming back are repeat episodes, never chronic. Scope = the Injury chapter
+  plus the infection level-2s (bacterial, mycoses, other/parasitic, respiratory,
+  intestinal, CNS, skin). "Viral infection" is exempt (session call, verified: HIV and
+  hepatitis are level-3s inside it); tuberculosis sits in "Bacterial infection" and
+  loses chronic status, a known cost. Lauren: note the rule for the report. Labels are
+  claims-only so the requirement-2 model isn't graded on its own inputs. Rejected: the
+  11-01 chronic rule (2+ dates >=30d apart), since 44% of what it called chronic were
+  bounded arcs.
