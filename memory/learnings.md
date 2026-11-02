@@ -70,3 +70,16 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   conversation, then promote to `scripts/eda/` (figures re-pointed to
   `oscar_cs.paths.FIGURES` with a session prefix) + one milestone report so every number
   stays reproducible. Watch for `savefig(OUT / fname)` variable paths when batch-editing.
+- **2026-11-02** — Cloud containers are ephemeral, so anything installed mid-session is
+  gone in the next one (and registers only at the next CLI startup anyway, never in the
+  running session). Lauren's skills persist via the environment's setup script instead
+  (environment menu → Edit → Setup script): it curls pinned SKILL.md files into
+  `~/.claude/skills/` (`i-have-adhd` @ 1ecea19 — vetted, markdown only; `humanize`
+  @ 0ef9fe5) and makes ADHD mode always-on by writing the frontmatter-stripped ruleset to
+  `~/.claude/i-have-adhd-always.md` plus an `@~/.claude/i-have-adhd-always.md` import in
+  user-level `~/.claude/CLAUDE.md` — verified end-to-end with a fresh CLI run. The
+  plugin's `touch ~/.claude/.i-have-adhd-always` flag works only through the plugin's own
+  SessionStart hook, so it is inert with raw-skill installs. Also: skills with
+  `disable-model-invocation: true` (i-have-adhd is one) are slash-only and never show up
+  in the model-facing skill list — check `~/.claude/skills/` before concluding one is
+  missing.
