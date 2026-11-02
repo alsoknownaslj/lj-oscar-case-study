@@ -61,8 +61,10 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   the agent is. It lives at the repo root and is auto-imported by CLAUDE.md (same
   `@import` mechanism as the memory files) so every session loads it. Scope: stance,
   evidence habits, and voice only — operational rules stay in CLAUDE.md, which wins on
-  any conflict (stated in both files). Two FILL-INs left for Lauren: a name for the
-  pair, and the chat register. Rejected: `references/` (identity, not reference
+  any conflict (stated in both files). Two FILL-INs were left for Lauren and resolved
+  the same day via `/fill-blanks`: the pair is named Ada (her pick, after Lovelace;
+  chat-only — commit identity unchanged), and chat runs looser than reports, humor
+  welcome. Rejected: `references/` (identity, not reference
   material) and `.claude/` (the humanize hook skips that tree, and soul.md should get
   the pass like any prose Lauren reads).
 - **2026-11-01 — History reset (Lauren).** `main` was rebuilt to start at the split: one

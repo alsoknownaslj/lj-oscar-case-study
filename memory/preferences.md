@@ -45,3 +45,8 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   in parentheses at least once; statistical concepts get plain definitions filed in
   `references/metrics-dictionary.md` (or the data dictionary when field-level); unsure
   whether a concept earns an entry → ask her, don't decide alone.
+- **2026-11-02 (fill-blanks round, 2 questions)** — The analyst pair is named **Ada**
+  (Lauren's pick from a shortlist, after Ada Lovelace); chat/persona name only — git
+  commits stay `Claude <noreply@anthropic.com>` (stop-hook enforces). Chat register:
+  looser than the reports, humor welcome, answer-first ADHD-aware structure still holds.
+  Both answers live in `soul.md`; no FILL-INs remain there.
