@@ -154,3 +154,9 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   template's exec summary, intro/background and recommendations sections. The two
   earlier drafts were deleted at her request later that day (branch
   `remove-superseded-reports`, PR left unmerged for her review).
+- **2026-11-02 — `.vscode/` ignored whole (Lauren).** `.gitignore` now ignores all of
+  `.vscode/`, and `.vscode/extensions.json` (SQLTools + DuckDB driver recommendations
+  from the `make db` port) was untracked with `git rm --cached` (local copies survive).
+  CLAUDE.md's IDE paragraph now names the two extension IDs to install by hand.
+  Supersedes the "only `extensions.json` committed" part of the 2026-11-02 IDE-SQL
+  entry. Rejected: keeping the `!.vscode/extensions.json` exception.

@@ -232,8 +232,9 @@ history (move detail to `references/` if it grows).
 
 Scripts are the memory of *how*; if you do a manual data step twice, promote it to a script.
 
-SQL from the IDE: run `make db`, install the recommended extensions
-(`.vscode/extensions.json`: SQLTools + the DuckDB driver), then add a SQLTools
+SQL from the IDE: run `make db`, install two VS Code extensions by hand (SQLTools
+`mtxr.sqltools` + the DuckDB driver `evidence.sqltools-duckdb-driver`; `.vscode/` is
+gitignored whole, so nothing ships the recommendation), then add a SQLTools
 connection once via its UI (driver DuckDB, database file `data/oscar.duckdb`, access
 mode Read Only; the driver doesn't resolve `${workspaceFolder}`, so a committed
 connection can't be portable). Rebuild with `make db` after editing `sql/models/` and
