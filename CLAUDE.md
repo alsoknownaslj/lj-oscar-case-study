@@ -229,8 +229,17 @@ history (move detail to `references/` if it grows).
 | `python scripts/sql.py "<query>" ` / `-f sql/x.sql` | duckdb with views over the tables |
 | `make db` | self-contained `data/oscar.duckdb` (tables + model views) for IDE browsing |
 | `make lint` / `make test` | ruff (format+check) / pytest |
+| `make readme` | regenerate README.md's AUTO sections (reports, make targets, scripts, slash commands) |
 
 Scripts are the memory of *how*; if you do a manual data step twice, promote it to a script.
+
+README sync (hook-enforced): `.claude/hooks/readme_sync.py` runs after every Write/Edit/
+NotebookEdit/Bash call, regenerates README.md's `AUTO:<name>` sections via
+`scripts/update_readme.py`, and nudges a prose review when a file behind a hand-written
+section changes (handoff, requirements, pyproject, fetch script, .gitignore). Never
+hand-edit inside the AUTO markers; commit README.md with the change that moved it.
+`make test` fails on a stale README. A new script needs a one-line module docstring
+(it becomes its README row).
 
 SQL from the IDE: run `make db`, install two VS Code extensions by hand (SQLTools
 `mtxr.sqltools` + the DuckDB driver `evidence.sqltools-duckdb-driver`; `.vscode/` is
