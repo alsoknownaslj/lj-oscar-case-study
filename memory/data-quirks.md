@@ -61,3 +61,10 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   ~8.1k members in neither, observed 3): the generator gave essentially everyone ≥1 event,
   so there is **no observable zero-utilization population**, and the brief's "200,000
   members" is really ~291.6k.
+- **2026-11-02** — Rx follows claims coherently (verified via first-fill-after-claim-day,
+  rx members, days ≤2018-05-05): fills follow **R-only (symptom) days almost like
+  diagnosis days** (48.1% vs 51.8% within 7d, median gap 2d both) and Z-only checkup days
+  much less (37.2%, median 5d). Follow-on drugs make clinical sense: contraceptives are #1
+  after Z-only days (gyn exams), ulcer drugs #1 after R-only days (abdominal pain is the
+  top R code). Symptom/admin-only members are genuinely light rx users: 50.9% have no
+  fills at all vs 82.5% rx presence for condition-diagnosed members (median 3 vs 7 fills).
