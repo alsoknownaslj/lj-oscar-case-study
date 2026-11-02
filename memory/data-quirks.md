@@ -124,3 +124,17 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   NOT convincingly Pareto: lognormal (μ=5.1, σ=3.0) tracks them better and the tail is
   truncated (only 669 values, finite window). Both are heavy-tailed either way — the
   practical Pareto-principle concentration holds regardless of the parametric family.
+- **2026-11-02** — Repetition structure (member×condition pairs, canonical window, ≥365d
+  runway; n=421,072): shape mix = **59.8% single / 23.6% bounded arc (span≤180d) / 11.8%
+  recurrent (>180d quiet gap, returns) / 4.9% continuous (span>180d, no long gap)**. The
+  current chronic rule (≥2 dates ≥30d apart) decomposes into **44.2% arc + 39.4% recurrent
+  + only 16.3% continuous** — 5 of 6 current "chronic" flags are not continuous management.
+  Arcs genuinely end (median 636d of silence afterwards). Category signatures are textbook:
+  fractures 52.6% arc / 7.8% cont+rec (follow-up cadence ~10d); sprains 27.6% arc / 7% c+r;
+  vs diabetes w/compl 19.7% cont + 22.8% rec (check-in gap ~63d), hypertension 10.7+24.3
+  (gap ~91d), thyroid 7.9+22.7 (83d). Two visit rhythms: episode follow-ups ~10–21d,
+  chronic check-ins ~60–92d. Traps: respiratory infections have long spans via
+  REINFECTION (20.1% recurrent, 3.5% continuous — span alone would misread them as
+  chronic); mood/anxiety look arc-y in claims (<9% continuous) though clinically chronic —
+  their chronicity lives in rx (SSRIs/antidepressants are top sustained classes), so
+  claims-shape needs rx corroboration for psych + recurrent-infection categories.
