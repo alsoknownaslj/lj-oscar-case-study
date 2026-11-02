@@ -92,3 +92,9 @@ detail lives in `reports/2026-11-02_eda-session.md`.)
     expected (27×)** — the extreme tail is a joint sub-population. Median member×class
     AND member×condition pair is a single touch; dx line-depth does NOT separate chronic
     from episodic (visit-dense back/joint episodes top it) while rx depth does.
+- **2026-11-02 (final build)** — In-window unmapped distinct codes = **216** (vs 217
+  all-time: one junk code lives only in the excluded 1899–2014 stray rows). v2 bucket
+  rows (canonical window): condition 1,509,935 / admin-Z 250,060 / symptoms-R 96,978 /
+  immunizations 29,164 / residual 31,625 / unmapped 1,990. All EDA cross-checks
+  (union 282,734 split, p99 63/94, 518 joint-p99 vs 19.6) reproduced exactly in the
+  rebuilt pipeline.

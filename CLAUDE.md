@@ -30,10 +30,10 @@ Context that shapes every decision:
   prototypes and honest limitations over polish. Creative framing is explicitly welcomed.
 - The audience evaluates how quickly a problem + dataset is understood and prototyped.
 
-Status decisions (Lauren, 2026-10-31): the case study has **not started** — this repo is
-the starting point and the 72-hour window has not been opened. **No framing is
-pre-committed**: the definition of "health status" gets proposed and justified during the
-analysis itself. Deliverables are **private, for Oscar reviewers only**.
+Status (Lauren, updated 2026-11-02): the 72-hour window is **open, deadline 5pm on
+2026-11-02 (Lauren's local time)**; this replaced the 2026-10-31 "not started" status.
+**Health status v2 is ratified (2026-11-02)**: its rules live in `memory/decisions.md`;
+it replaced the earlier "no framing is pre-committed" stance. Deliverables are **private, for Oscar reviewers only**.
 
 ## Data status — read this first
 

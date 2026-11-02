@@ -12,7 +12,8 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
 
 - **2026-10-31 (fill-blanks round, 11 questions)** — Case study **not started**; the 72-hour
   window is not open yet; no pre-committed "health status" framing (propose it during
-  analysis); deliverables private, Oscar reviewers only.
+  analysis); deliverables private, Oscar reviewers only. (Superseded 2026-11-02: the
+  window is open, deadline 5pm that day.)
 - **2026-10-31** — Report prefs: markdown report + supporting notebook; first person,
   plain; ~2 pages + appendix; every report includes "What more time buys" and "Open
   questions"; explicitly skipped: time-spent accounting and an AI-assistance note.
