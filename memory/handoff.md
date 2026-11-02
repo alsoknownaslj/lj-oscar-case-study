@@ -37,9 +37,9 @@ requirements built, final report written). The 72-hour window closes 5pm today
   518 joint-p99 vs 19.6 expected.
 - Everything is merged to `main`. Branches `model-split-preference` and
   `case-study-final` are merged; cloud sessions can't delete remote branches (Lauren
-  can, in the GitHub UI). The old draft report
-  (`reports/2026-11-01_health-status-characterization.md`) is superseded by the final
-  report but kept for the record.
+  can, in the GitHub UI). The 11-01 requirement-1 draft
+  (`reports/2026-11-01_health-status-characterization.md`) and its two figures were
+  deleted at Lauren's request on the same PR branch (still in git history).
 
 ## If Lauren reopens anything
 

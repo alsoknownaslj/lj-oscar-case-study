@@ -81,7 +81,8 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   (oscar_cs.health_status.render_vignette). Rejected: single severity score (hides which
   conditions), utilization-only clustering (not clinically readable), CCS level 1 (too
   coarse) and level 3 (too sparse). Full justification + numbers:
-  reports/2026-11-01_health-status-characterization.md. Per Lauren's 2026-10-31 call the
+  reports/2026-11-01_health-status-characterization.md (deleted 2026-11-02 at Lauren's
+  request, still in git history). Per Lauren's 2026-10-31 call the
   framing was to be proposed during analysis — this is that proposal, open to reopening.
 - **2026-11-02 — Canonical analysis window (Lauren): [2015-09-01, 2018-06-04], both
   tables.** One uniform time frame for all cross-table and population statistics, set to
