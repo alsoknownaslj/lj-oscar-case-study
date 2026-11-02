@@ -162,3 +162,12 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   low-low 2.0×, high-high 4.5×, discordant corners 0.11× — smooth monotone dependence.
   Quantile-bin caveat: ties make "quartiles" unequal (dx Q1 [1–2 lines] holds 33% of the
   union; 10% of members have exactly 1 event on either axis).
+- **2026-11-02** — Quartile-binned pair tables (pooled quartiles merge: p25=p50=1 on both
+  sides — the median member×class AND member×condition relationship is a single touch).
+  RX pairs (1 / 2–3 / 4+ fills = 57.1/23.2/19.7%): SSRIs 44.8% in the 4+ bin, statins
+  41.1%, ACE 40.5% vs antibiotics ≈2%, vaccines 0.5%. DX pairs (1 / 2 / 3+ lines =
+  63.3/17.4/19.4%): back problems 37.7% in 3+, heart 31.1%, joints 30.2%, hypertension
+  26.8% … immunizations/screening 5.7%. Cross-read: rx depth cleanly tracks maintenance
+  therapy, but dx line-depth does NOT separate chronic from episodic (visit-dense back/
+  joint episodes top the table) — repetition SHAPE, not volume, carries the claims-side
+  chronicity signal.
