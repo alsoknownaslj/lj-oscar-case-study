@@ -17,7 +17,8 @@ requirements built, final report written). The 72-hour window closes 5pm today
   drafts (`2026-11-02_final-report.md`, `2026-11-02_data-analysis-report.md`) and the
   EDA-days session log (`2026-11-02_session-export.md`), on branch
   `remove-superseded-reports` with the PR left open and unmerged by her instruction. Git
-  history keeps all three.
+  history keeps all three. The EDA findings report (`2026-11-02_eda-session.md`) stays,
+  by her call.
 - **Health status v2 is ratified and implemented** (rules in `memory/decisions.md`
   2026-11-02): member × CCS level-2 conditions shaped one_off/episode/chronic (180d
   span boundary), reinfection-trap cap (injuries + infections never chronic; Viral
