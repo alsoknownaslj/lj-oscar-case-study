@@ -28,3 +28,27 @@ dist/
 .vscode/*
 !.vscode/extensions.json
 .idea/
+
+# secrets / local env (never commit credentials)
+.env
+.env.*
+!.env.example
+
+# claude code: per-user local settings stay out; shared settings.json is committed
+.claude/settings.local.json
+
+# more python tool caches
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
+.virtual_documents/
+
+# session logs and exports go to chat, never the repo (Lauren, 2026-11-02)
+*session-export*
+*session-log*
+
+# more os / editor noise
+Thumbs.db
+*.swp
+*~
