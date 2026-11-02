@@ -99,3 +99,10 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   reports first said hypertension's top decile was "over-confident"; the numbers
   (predicted 0.205, observed 0.220) say slightly under. Fixed same day. Read direction
   from the calibration arrays, never from the plot alone.
+- **2026-11-02 (utilization ablation)** — The "is it just volume?" check is cheap and
+  worth institutionalizing: refit on log1p total fills + distinct classes alone
+  (`scripts/check_utilization_baseline.py`, same split/seed) and compare AUPRC. Result:
+  utilization alone already ranks well (AUROC 0.72–0.87), but drug choice multiplies
+  AUPRC 2.0–5.8x for 14/15 conditions — the exception is Other connective tissue
+  disease (1.3x; volume-driven, said so in both reports). Strongest drug-specific
+  signal: thyroid 5.8x, eye 4.1x, skin 4.0x, diabetes-with-complications 3.5x.

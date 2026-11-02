@@ -111,7 +111,7 @@ against 0.007) because little in a pharmacy history marks them. Calibration trac
 diagonal for the three conditions I checked; the largest miss is hypertension's top
 decile, which runs slightly under (20.5% predicted, 22.0% observed). The coefficients are a free sanity check: ACE-inhibitor and ARB combinations
 for hypertension, biguanides and SGLT2 inhibitors for diabetes, antithyroid agents for
-thyroid. The model found the formulary without a claims feature in reach.
+thyroid. The model found the formulary without a claims feature in reach. An ablation answers the obvious objection, that sick members simply fill more prescriptions: refit on total fills and distinct classes alone, every condition loses ground, and the full model multiplies the utilization-only AUPRC by 2.0 to 5.8 times for 14 of the 15 conditions. The exception is other connective tissue disease (1.3 times), whose score mostly reflects overall volume; I would not claim drug-specific signal for it.
 
 ![per-condition AUROC and AUPRC](figures/2026-11-02_final_fig03_rx_model_metrics.png)
 
@@ -165,6 +165,7 @@ Every number above reproduces from the committed scripts, in order:
 | characterization | `scripts/build_health_status.py` | `data/processed/member_{conditions,symptoms,health_status,tiers}.parquet`, `health_status_stats.json` |
 | figures 1–2 | `scripts/report_figures.py` | `reports/figures/2026-11-02_final_fig01/02` |
 | model + figures 3–4 | `scripts/build_rx_model.py` | `rx_model_metrics.json`, `rx_only_scores.parquet`, fig03/04 |
+| utilization ablation | `scripts/check_utilization_baseline.py` | `utilization_ablation.json` |
 
 Policy constants (window, shape rule, cap scope, tier rule) live in
 `src/oscar_cs/health_status.py`; the SQL takes them as parameters. Unit tests

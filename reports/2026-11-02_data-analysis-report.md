@@ -111,7 +111,7 @@ from 2016-07 to 2017-01.
 every condition (Figure 3). Performance follows how drug-managed a condition is, and
 the learned coefficients match the pharmacology: ACE-inhibitor and ARB combinations for
 hypertension, biguanides and SGLT2 inhibitors for diabetes, antithyroid agents for
-thyroid disorders. Calibration tracks the diagonal for the three conditions I checked;
+thyroid disorders. An ablation answers the obvious objection, that sick members simply fill more prescriptions: refit on total fills and distinct classes alone, every condition loses ground, and the full model multiplies the utilization-only AUPRC by 2.0 to 5.8 times for 14 of the 15 conditions. The exception is other connective tissue disease (1.3 times), whose score mostly reflects overall volume; I would not claim drug-specific signal for it. Calibration tracks the diagonal for the three conditions I checked;
 the largest miss is hypertension's top decile, which runs slightly under (20.5%
 predicted, 22.0% observed; Figure 4). Applied to the
 37,583 prescription-only members, the scores rank well: the 530 such members with three
@@ -179,7 +179,7 @@ read as epidemiology.
 ---
 
 *Reproduction: `scripts/build_health_status.py`, `scripts/report_figures.py`,
-`scripts/build_rx_model.py`, run in that order on the canonical window; every number
+`scripts/build_rx_model.py`, `scripts/check_utilization_baseline.py`, run in that order on the canonical window; every number
 above also executes in `notebooks/01_final_report.ipynb`. Policy constants live in
 `src/oscar_cs/health_status.py`. The companion write-up in the house skeleton is
 `reports/2026-11-02_final-report.md`; structure per
