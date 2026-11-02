@@ -153,3 +153,12 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   ophthalmic antibiotics×eye 6×, thiazides×hypertension 5×, opioids/muscle-relaxants×
   fractures/back ~5× (injuries DO have an rx tie, but non-specific analgesia);
   screening/respiratory rows run slightly BELOW 1× against cardiometabolic classes.
+- **2026-11-02** — Volume distributions (per member, in-window): dx claim lines p50=4,
+  p90=18, p99=63, p99.9=173, max 914; rx fills p50=5, p90=29, p99=94, p99.9=185, max 669.
+  Raw IQR fences are useless on these tails (would flag ~10% of members as "outliers");
+  log-IQR is inconsistent across the two axes. **Extreme utilization is strongly joint:
+  518 members sit above p99 on BOTH axes vs ~19 expected under independence (27×)** — the
+  tail is a real sub-population, not noise. Decile×decile joint-vs-independence lifts:
+  low-low 2.0×, high-high 4.5×, discordant corners 0.11× — smooth monotone dependence.
+  Quantile-bin caveat: ties make "quartiles" unequal (dx Q1 [1–2 lines] holds 33% of the
+  union; 10% of members have exactly 1 event on either axis).
