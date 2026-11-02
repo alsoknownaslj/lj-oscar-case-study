@@ -46,10 +46,16 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   only `.vscode/extensions.json` is committed (`.vscode` stays gitignored otherwise).
   Ported from `oscar-case-study` commit 48ddedb; verified here by opening the file with
   duckdb 1.3.2 and running every view (99.89% coverage reproduced).
-- **2026-11-02** — Cloud containers are ephemeral, so a plugin installed during a session
-  is gone in the next one. Persistence = one line in the environment's setup script
-  (environment menu → Edit → Setup script):
-  `claude plugin install --marketplace ayghri/i-have-adhd i-have-adhd` (Lauren's
-  output-formatting plugin; vetted at v0.4.1, commit 1ecea19 — a markdown skill plus an
-  opt-in SessionStart hook, no network calls or writes). Also: a plugin installed
-  mid-session registers only at the next CLI startup, never in the running session.
+- **2026-11-02** — Cloud containers are ephemeral, so anything installed mid-session is
+  gone in the next one (and registers only at the next CLI startup anyway, never in the
+  running session). Lauren's skills persist via the environment's setup script instead
+  (environment menu → Edit → Setup script): it curls pinned SKILL.md files into
+  `~/.claude/skills/` (`i-have-adhd` @ 1ecea19 — vetted, markdown only; `humanize`
+  @ 0ef9fe5) and makes ADHD mode always-on by writing the frontmatter-stripped ruleset to
+  `~/.claude/i-have-adhd-always.md` plus an `@~/.claude/i-have-adhd-always.md` import in
+  user-level `~/.claude/CLAUDE.md` — verified end-to-end with a fresh CLI run. The
+  plugin's `touch ~/.claude/.i-have-adhd-always` flag works only through the plugin's own
+  SessionStart hook, so it is inert with raw-skill installs. Also: skills with
+  `disable-model-invocation: true` (i-have-adhd is one) are slash-only and never show up
+  in the model-facing skill list — check `~/.claude/skills/` before concluding one is
+  missing.
