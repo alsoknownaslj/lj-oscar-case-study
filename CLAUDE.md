@@ -250,7 +250,7 @@ the rebuild.
 | `references/domain-notes.md` | ICD-10 / CCS / NDC primer, drug→condition inference notes |
 | `references/metrics-dictionary.md` | plain definitions of statistical concepts reports lean on (acronyms spelled out once; unsure whether a concept belongs → ask Lauren) |
 | `references/samples/ccs_sample.csv` | real 400-row head of `ccs.csv` |
-| `references/report-outline-template.md` | Lauren's 6-section data-analysis-report outline (structure of record for the template-styled report) |
+| `references/report-outline-template.md` | Lauren's 6-section data-analysis-report outline (it shaped the final case-study report) |
 | `references/samples/data-analysis-report-team5.pdf` | the example report Lauren shared alongside the outline (register: narrated prose, numbered+captioned figures, plain-step methods) |
 
 New standing knowledge gets a new md file here + a row in this table. Session-specific

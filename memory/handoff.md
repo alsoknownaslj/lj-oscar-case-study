@@ -10,14 +10,14 @@ requirements built, final report written). The 72-hour window closes 5pm today
 ## Where things stand
 
 - **THE DELIVERABLE is `reports/2026-11-02_case-study-report.md`** (Lauren's combined
-  structure, humanized, no semicolons). The two drafts below are superseded history.
-- **Two earlier final-report drafts remain on main**: the house-skeleton one
-  (`reports/2026-11-02_final-report.md`) and the template-structured one
-  (`reports/2026-11-02_data-analysis-report.md`, per `references/report-outline-template.md`
-  + the Team-5 example PDF she uploaded late in the day — both now in references/).
-- **The house-skeleton draft is `reports/2026-11-02_final-report.md`** (humanized, ~2 pages +
-  appendix) with `notebooks/01_final_report.ipynb` reproducing every number (executed
-  clean, masked ids only). Figures: `reports/figures/2026-11-02_final_fig01–04`.
+  structure, humanized, no semicolons), exported as `reports/2026-11-02_case-study-report.pdf`
+  (14 pages, figures embedded). `notebooks/01_final_report.ipynb` reproduces every number
+  (executed clean, masked ids only). Figures: `reports/figures/2026-11-02_final_fig01–04`.
+- **Deleted at Lauren's request (2026-11-02, after the deadline):** the two superseded
+  drafts (`2026-11-02_final-report.md`, `2026-11-02_data-analysis-report.md`) and the
+  EDA-days session log (`2026-11-02_session-export.md`), on branch
+  `remove-superseded-reports` with the PR left open and unmerged by her instruction. Git
+  history keeps all three.
 - **Health status v2 is ratified and implemented** (rules in `memory/decisions.md`
   2026-11-02): member × CCS level-2 conditions shaped one_off/episode/chronic (180d
   span boundary), reinfection-trap cap (injuries + infections never chronic; Viral

@@ -151,4 +151,5 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   bullets, succinctness) with the template draft's methodology and limitations, plus
   an AI-setup section and a collaboration appendix she asked for. Rejected: the
   template's exec summary, intro/background and recommendations sections. The two
-  earlier drafts stay on main as history; deleting them is her call.
+  earlier drafts were deleted at her request later that day (branch
+  `remove-superseded-reports`, PR left unmerged for her review).
