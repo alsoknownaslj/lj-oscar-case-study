@@ -64,3 +64,10 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   median and quartile tiering; wants principled low/med/high bins (next session).
   Utilization relationship questions should use volumes (repeats included), not distinct
   counts. Comfortable with log-log/CCDF plots once explained; liked Pareto overlays.
+- **2026-11-02 (template round)** — Lauren uploaded her 6-section report outline
+  (executive summary / intro & background / data & methodology / results & findings /
+  discussion & limitations / recommendations & action items) plus the Team-5 example
+  PDF, and asked for a second final-report draft in that structure. Both saved to
+  `references/` (outline verbatim, PDF under samples/). Register per the example:
+  narrated prose, numbered figures with captions ("Figure N: ..."), methods as plain
+  steps. House rules still apply on top: first person, humanize pass, no member rows.

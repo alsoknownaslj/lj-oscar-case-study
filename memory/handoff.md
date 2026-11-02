@@ -9,7 +9,11 @@ requirements built, final report written). The 72-hour window closes 5pm today
 
 ## Where things stand
 
-- **The deliverable is `reports/2026-11-02_final-report.md`** (humanized, ~2 pages +
+- **Two final-report drafts are on main, Lauren picks**: the house-skeleton one
+  (`reports/2026-11-02_final-report.md`) and the template-structured one
+  (`reports/2026-11-02_data-analysis-report.md`, per `references/report-outline-template.md`
+  + the Team-5 example PDF she uploaded late in the day — both now in references/).
+- **The house-skeleton draft is `reports/2026-11-02_final-report.md`** (humanized, ~2 pages +
   appendix) with `notebooks/01_final_report.ipynb` reproducing every number (executed
   clean, masked ids only). Figures: `reports/figures/2026-11-02_final_fig01–04`.
 - **Health status v2 is ratified and implemented** (rules in `memory/decisions.md`
