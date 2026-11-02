@@ -241,6 +241,7 @@ the rebuild.
 | `references/data-dictionary.md` | per-table schemas; AUTO section rewritten by `make profile` |
 | `references/report-style.md` | report shaping details + Lauren's preferences (FILL-INs live here) |
 | `references/domain-notes.md` | ICD-10 / CCS / NDC primer, drug→condition inference notes |
+| `references/metrics-dictionary.md` | plain definitions of statistical concepts reports lean on (acronyms spelled out once; unsure whether a concept belongs → ask Lauren) |
 | `references/samples/ccs_sample.csv` | real 400-row head of `ccs.csv` |
 
 New standing knowledge gets a new md file here + a row in this table. Session-specific

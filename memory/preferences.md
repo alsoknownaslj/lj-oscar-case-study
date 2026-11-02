@@ -41,4 +41,7 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   or the right term where it earns its keep; no heavy math, no word-heavy derivations).
   Results honesty is absolute: never lie about or shade a result. She also wants the
   agent known for catching unusual-but-critical findings others would skim past. All
-  folded into `soul.md` the same day.
+  folded into `soul.md` the same day. Same-day follow-up: acronyms get their full name
+  in parentheses at least once; statistical concepts get plain definitions filed in
+  `references/metrics-dictionary.md` (or the data dictionary when field-level); unsure
+  whether a concept earns an entry → ask her, don't decide alone.
