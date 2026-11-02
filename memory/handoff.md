@@ -3,12 +3,14 @@
 _Rewrite this file whole (never append) at the end of a session or when direction changes.
 It is the baton: the next session reads it before doing anything._
 
-**As of 2026-11-02 (two-day EDA session with Lauren, closed cleanly, merged to main).**
+**As of 2026-11-02 (two-day EDA session with Lauren; merged to main together with the
+parallel soul.md/IDE-SQL session).**
 
 ## Where things stand
 
 Lauren reopened the requirement-1 framing before ratifying it and ran a collaborative
-EDA-first pass instead. Everything from both days is merged to `main`.
+EDA-first pass instead. Everything from both days is on `main`, merged with a parallel
+session's work (see below).
 
 - **The findings home is `reports/2026-11-02_eda-session.md`** (humanized, 8 findings,
   2 logged decisions, next-session agenda). Every number reproduces from
@@ -21,8 +23,18 @@ EDA-first pass instead. Everything from both days is merged to `main`.
   high-utilizer flag, remove nobody) and the whole health-status definition.
 - **The requirement-1 draft still exists** (pipeline `scripts/build_health_status.py`,
   report `reports/2026-11-01_health-status-characterization.md`) but its framing is
-  explicitly reopened and its numbers predate the canonical window — treat it as a
-  prototype to rebuild once the definition lands, not as the baseline.
+  explicitly reopened and its numbers predate the canonical window — a prototype to
+  rebuild once the definition lands, not the baseline.
+- **Merged from the parallel session (same days, main):** `soul.md` at the repo root —
+  the analyst persona, named **Ada** (chat only; commit identity unchanged), auto-imported
+  by CLAUDE.md which wins on conflict; `references/metrics-dictionary.md`; `make db`
+  (self-contained `data/oscar.duckdb` for SQLTools review) with `sql/models/` staging
+  views and `oscar_cs.db.connect(models=True)`. Our `connect_views()`/`read_sql()` now
+  live in the same module. That session's "no analysis has been done" notes are
+  superseded by this handoff. Note: `sql/models/` staging views predate the canonical
+  window — align them when the definition lands.
+- The old `req1-health-status` branch is merged; cloud sessions cannot delete remote
+  branches (403), so Lauren can remove it in the GitHub UI if she wants it gone.
 
 ## Next session agenda (Lauren's words, 2026-11-02)
 
@@ -44,13 +56,12 @@ EDA-first pass instead. Everything from both days is merged to `main`.
 ## Fresh-container notes
 
 - `pip install -r requirements.txt && pip install -e .`; data: `make fetch cache`
-  (needs the two Drive domains allowed; parquet cache sometimes survives a container
+  (needs the two Drive domains allowed; the parquet cache sometimes survives a container
   pause while raw CSVs do not — `connect_views` prefers the cache, so check
   `data/cache/` before re-fetching).
 - Commits: identity `Claude <noreply@anthropic.com>`; branch names descriptive, never
-  `claude/...`; no PRs unless Lauren asks. The 2026-11-01/02 work went to
-  `req1-health-status`, now merged to `main`.
+  `claude/...`; no PRs unless Lauren asks.
 - Chat style for Lauren: answers first, short chunks, bold anchors, one clear next
-  action (see preferences 2026-11-02 for her analysis-style calls).
+  action — full detail in `soul.md` and preferences (2026-11-02 entries).
 - The 72-hour case-study window is Lauren's to track; requirement-2 modeling has not
   started.

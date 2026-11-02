@@ -47,6 +47,26 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   sessions that write PR bodies themselves. Rejected: a PreToolUse hook rewriting PR
   bodies — the attribution setting is the switch Claude Code actually honors, and body
   rewriting across the several PR-creating tools is fragile. Commit trailers unchanged.
+- **2026-11-02 — IDE SQL via `make db`; only plumbing models ported.** Lauren asked for
+  the `oscar-case-study` commit 48ddedb setup here (run project SQL from a db extension
+  in VS Code). Ported: `scripts/build_db.py`, `oscar_cs.db` (layer-ordered model loader,
+  `scripts/sql.py` now uses it), `.vscode/extensions.json`, and the four data-plumbing
+  views (`stg_ccs`, `stg_claim_lines`, `stg_prescription_drugs`, `int_claim_lines_ccs`) —
+  these encode only facts already settled in CLAUDE.md (normalized join, exclusion
+  flags, window marks). NOT ported: `dim_members` and the `fct_*` models — they carry
+  the other repo's analysis framing (chronic rules, care-pattern cutoffs) and this
+  repo's standing call is that no framing is pre-committed; they get proposed fresh
+  during the analysis. Lauren can reopen if she wants them carried over.
+- **2026-11-02 — `soul.md` added (Lauren).** Lauren asked for a soul file defining who
+  the agent is. It lives at the repo root and is auto-imported by CLAUDE.md (same
+  `@import` mechanism as the memory files) so every session loads it. Scope: stance,
+  evidence habits, and voice only — operational rules stay in CLAUDE.md, which wins on
+  any conflict (stated in both files). Two FILL-INs were left for Lauren and resolved
+  the same day via `/fill-blanks`: the pair is named Ada (her pick, after Lovelace;
+  chat-only — commit identity unchanged), and chat runs looser than reports, humor
+  welcome. Rejected: `references/` (identity, not reference
+  material) and `.claude/` (the humanize hook skips that tree, and soul.md should get
+  the pass like any prose Lauren reads).
 - **2026-11-01 — History reset (Lauren).** `main` was rebuilt to start at the split: one
   root commit holding the repo's starting state, then the post-split commits (humanize
   hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split

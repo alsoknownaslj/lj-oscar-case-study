@@ -23,7 +23,8 @@ dist/
 *.duckdb
 *.duckdb.wal
 
-# os / editor
+# os / editor (keep the shared extension recommendations)
 .DS_Store
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/

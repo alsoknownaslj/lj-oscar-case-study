@@ -35,6 +35,24 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
 - **2026-11-02** — Asked for a dense chat explanation rewritten "for ADHD": answers first,
   short chunks, bullets, bold anchors, one clear next action. Default chat explainers to
   that shape (reports keep their own style rules).
+- **2026-11-02** — Lauren reviews SQL by running it in VS Code through a db extension
+  (SQLTools + DuckDB driver) with visible table output. Keep `make db` working
+  (self-contained duckdb file; rebuild after model changes).
+- **2026-11-02 (soul.md round)** — Communication: Lauren has ADHD and wants sessions
+  deliberately good at writing to her — answer first, one thing at a time, no walls of
+  text, next action explicit. Method explanations stay lightly technical (a small formula
+  or the right term where it earns its keep; no heavy math, no word-heavy derivations).
+  Results honesty is absolute: never lie about or shade a result. She also wants the
+  agent known for catching unusual-but-critical findings others would skim past. All
+  folded into `soul.md` the same day. Same-day follow-up: acronyms get their full name
+  in parentheses at least once; statistical concepts get plain definitions filed in
+  `references/metrics-dictionary.md` (or the data dictionary when field-level); unsure
+  whether a concept earns an entry → ask her, don't decide alone.
+- **2026-11-02 (fill-blanks round, 2 questions)** — The analyst pair is named **Ada**
+  (Lauren's pick from a shortlist, after Ada Lovelace); chat/persona name only — git
+  commits stay `Claude <noreply@anthropic.com>` (stop-hook enforces). Chat register:
+  looser than the reports, humor welcome, answer-first ADHD-aware structure still holds.
+  Both answers live in `soul.md`; no FILL-INs remain there.
 - **2026-11-02 (EDA day)** — Process: EDA together BEFORE committing to a definition;
   reopened the req-1 framing rather than ratifying it. Wants distributions shown as they
   are: per-group quantiles over pooled bins, "actual probability distribution" over

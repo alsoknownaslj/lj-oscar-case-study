@@ -45,6 +45,22 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   never copy its values into hand-written docs as fact (that's how 90/477/684 drug
   hierarchy counts went wrong; exact is 92/464/687). Exact-verify any distinct count
   before documenting it — mistake 12 applies to our own tooling, not just ad-hoc queries.
+- **2026-11-02** — IDE SQL browsing: `make db` writes a self-contained `data/oscar.duckdb`
+  (base tables copied in, model views created inside, no file paths). Written via
+  `attach ... (storage_version 'v1.0.0')` because duckdb readers can't open newer storage
+  formats and the SQLTools DuckDB driver bundles 1.3.2 (container duckdb is 2.0.0).
+  Cross-version trap: `date_trunc` returns TIMESTAMP on older engines and DATE on newer —
+  views that must read the same under both need an explicit `cast(... as date)`
+  (`stg_prescription_drugs.fill_month`). The driver's `${workspaceFolder}` handling is
+  commented out in its source, so connections are added once through the SQLTools UI;
+  only `.vscode/extensions.json` is committed (`.vscode` stays gitignored otherwise).
+  Ported from `oscar-case-study` commit 48ddedb; verified here by opening the file with
+  duckdb 1.3.2 and running every view (99.89% coverage reproduced).
+- **2026-11-02** — Cloud sessions can push commits (branches and main) but NOT delete
+  remote branches: `git push origin --delete <branch>` got an HTTP 403 from the remote,
+  and the retry was blocked by the session's own permission layer as destructive. Don't
+  burn time retrying — merge, leave the branch, and let Lauren delete it in the GitHub UI
+  (or a local session can).
 - **2026-11-02** — duckdb ASOF JOIN is the right tool for nearest-event linkage
   (last claim before each fill): `asof left join ... on a.m = b.m and b.d <= a.d` picks
   the greatest earlier date with no row explosion. Also: scipy `hierarchy.leaves_list`
