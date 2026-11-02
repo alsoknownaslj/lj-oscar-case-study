@@ -160,3 +160,14 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   CLAUDE.md's IDE paragraph now names the two extension IDs to install by hand.
   Supersedes the "only `extensions.json` committed" part of the 2026-11-02 IDE-SQL
   entry. Rejected: keeping the `!.vscode/extensions.json` exception.
+- **2026-11-02 — README auto-sync (Lauren asked for a hook).** README.md is split into
+  hand-written prose and four generated `AUTO:<name>` sections (reports + notebook,
+  make targets, scripts, slash commands), rebuilt by stdlib-only
+  `scripts/update_readme.py` from Makefile `##` comments, script docstrings, report
+  `# ` titles and command frontmatter. PostToolUse hook `.claude/hooks/readme_sync.py`
+  (Write|Edit|NotebookEdit|Bash) reruns it after every change and nudges a prose review,
+  once per file per session, when a file behind a hand-written section changes.
+  `tests/test_readme.py` (`--check`) catches edits made outside Claude. Rejected: having
+  the hook rewrite prose (a hook can't write judgment calls; it nudges instead), a git
+  pre-commit hook (not installed in fresh clones, and Lauren's hooks live in
+  `.claude/settings.json`), and regenerating the whole README (would erase her voice).

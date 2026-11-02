@@ -110,3 +110,7 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   to PR bodies server-side, so `attribution.pr: ""` in settings doesn't stop it. Verify
   every PR body after create/update (`pull_request_read` method `get`) and rewrite it
   without the footer; re-check after the rewrite in case the update re-appends it.
+- **2026-11-02** — Hook edits to `.claude/settings.json` took effect mid-session: the new
+  README-sync PostToolUse hook fired on the very next Write. No restart needed for hooks
+  (unlike skills). Test hooks offline too by piping a fake payload:
+  `echo '{"session_id":"t","tool_input":{"file_path":"..."}}' | python3 .claude/hooks/x.py`.
