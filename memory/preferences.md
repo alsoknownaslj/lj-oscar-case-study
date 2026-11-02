@@ -32,3 +32,6 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   Claude Code" footer.
 - **2026-11-01** — Model split: Lauren brainstorms with Opus 5.5; any code in this repo
   is written by Fable 5 or 5.1.
+- **2026-11-02** — Asked for a dense chat explanation rewritten "for ADHD": answers first,
+  short chunks, bullets, bold anchors, one clear next action. Default chat explainers to
+  that shape (reports keep their own style rules).
