@@ -66,6 +66,9 @@ A member's health status has five parts:
 - **Utilization:** tiers for claim lines and prescription fills, plus a flag for the top
   1% of each.
 
+*Example: Member A has chronic blood cancer and a chronic lower GI disorder, a one-off
+migraine and a one-off injury, and 10 claim days from 2016 to 2018.*
+
 ### Why I made these calls
 
 - **CCS Level 2.** Level 1 (18 chapters) hides which condition a member has, and Level 3
