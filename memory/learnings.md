@@ -46,3 +46,8 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   only `.vscode/extensions.json` is committed (`.vscode` stays gitignored otherwise).
   Ported from `oscar-case-study` commit 48ddedb; verified here by opening the file with
   duckdb 1.3.2 and running every view (99.89% coverage reproduced).
+- **2026-11-02** — Cloud sessions can push commits (branches and main) but NOT delete
+  remote branches: `git push origin --delete <branch>` got an HTTP 403 from the remote,
+  and the retry was blocked by the session's own permission layer as destructive. Don't
+  burn time retrying — merge, leave the branch, and let Lauren delete it in the GitHub UI
+  (or a local session can).
