@@ -101,7 +101,7 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   designs principled low/med/high bins for diagnostic-claim volume, fill volume, and the
   claims×rx contingency table — candidates: log-scale natural breaks, mixture models,
   clinically anchored cuts. Nothing binned is final until then.
-- **2026-11-02 — Outlier policy (proposed by session; pending Lauren).** Remove no
+- **2026-11-02 — Outlier policy (session proposal; ratified by Lauren same day).** Remove no
   members: the extreme tail is a jointly structured sub-population (518 members above
   p99 on both volume axes vs ~19 under independence) and the brief asks for unusual-
   pattern detection, so it is a segment/deliverable. Use percentile fences, never raw
