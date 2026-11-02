@@ -47,6 +47,16 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   sessions that write PR bodies themselves. Rejected: a PreToolUse hook rewriting PR
   bodies — the attribution setting is the switch Claude Code actually honors, and body
   rewriting across the several PR-creating tools is fragile. Commit trailers unchanged.
+- **2026-11-02 — IDE SQL via `make db`; only plumbing models ported.** Lauren asked for
+  the `oscar-case-study` commit 48ddedb setup here (run project SQL from a db extension
+  in VS Code). Ported: `scripts/build_db.py`, `oscar_cs.db` (layer-ordered model loader,
+  `scripts/sql.py` now uses it), `.vscode/extensions.json`, and the four data-plumbing
+  views (`stg_ccs`, `stg_claim_lines`, `stg_prescription_drugs`, `int_claim_lines_ccs`) —
+  these encode only facts already settled in CLAUDE.md (normalized join, exclusion
+  flags, window marks). NOT ported: `dim_members` and the `fct_*` models — they carry
+  the other repo's analysis framing (chronic rules, care-pattern cutoffs) and this
+  repo's standing call is that no framing is pre-committed; they get proposed fresh
+  during the analysis. Lauren can reopen if she wants them carried over.
 - **2026-11-01 — History reset (Lauren).** `main` was rebuilt to start at the split: one
   root commit holding the repo's starting state, then the post-split commits (humanize
   hooks, handoff, repo rules) — force-pushed, so pre-reset SHAs are gone. Pre-split

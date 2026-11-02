@@ -35,3 +35,14 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   made unique keys look duplicated — always confirm keys with exact counts; (2) the
   profiler's AUTO-marker replace matched markers *mentioned in prose* — match markers on
   their own lines (line-anchored regex, fixed).
+- **2026-11-02** — IDE SQL browsing: `make db` writes a self-contained `data/oscar.duckdb`
+  (base tables copied in, model views created inside, no file paths). Written via
+  `attach ... (storage_version 'v1.0.0')` because duckdb readers can't open newer storage
+  formats and the SQLTools DuckDB driver bundles 1.3.2 (container duckdb is 2.0.0).
+  Cross-version trap: `date_trunc` returns TIMESTAMP on older engines and DATE on newer —
+  views that must read the same under both need an explicit `cast(... as date)`
+  (`stg_prescription_drugs.fill_month`). The driver's `${workspaceFolder}` handling is
+  commented out in its source, so connections are added once through the SQLTools UI;
+  only `.vscode/extensions.json` is committed (`.vscode` stays gitignored otherwise).
+  Ported from `oscar-case-study` commit 48ddedb; verified here by opening the file with
+  duckdb 1.3.2 and running every view (99.89% coverage reproduced).

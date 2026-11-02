@@ -215,9 +215,18 @@ history (move detail to `references/` if it grows).
 | `make cache` | faithful all-string parquet mirrors → `data/cache/` |
 | `make profile` | profiles raw data → rewrites AUTO section of `references/data-dictionary.md` |
 | `python scripts/sql.py "<query>" ` / `-f sql/x.sql` | duckdb with views over the tables |
+| `make db` | self-contained `data/oscar.duckdb` (tables + model views) for IDE browsing |
 | `make lint` / `make test` | ruff (format+check) / pytest |
 
 Scripts are the memory of *how*; if you do a manual data step twice, promote it to a script.
+
+SQL from the IDE: run `make db`, install the recommended extensions
+(`.vscode/extensions.json`: SQLTools + the DuckDB driver), then add a SQLTools
+connection once via its UI (driver DuckDB, database file `data/oscar.duckdb`, access
+mode Read Only; the driver doesn't resolve `${workspaceFolder}`, so a committed
+connection can't be portable). Rebuild with `make db` after editing `sql/models/` and
+reconnect in the IDE; duckdb allows one writer, so a read/write IDE connection blocks
+the rebuild.
 
 ## References index
 

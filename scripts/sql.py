@@ -1,10 +1,11 @@
-"""Run duckdb SQL against the project tables.
+"""Run duckdb SQL against the project tables and models.
 
-Views are registered for every table found, parquet cache preferred over raw CSV:
-  ccs, claim_lines, prescription_drugs
+Views are registered for every base table (parquet cache preferred over raw CSV) plus
+the layered models in sql/models/ (stg_* -> int_* -> dim_* -> fct_*):
+  ccs, claim_lines, prescription_drugs, stg_*, int_*, ...
 
 Usage:
-  python scripts/sql.py "select ccs_1_desc, count(*) from ccs group by 1 order by 2 desc"
+  python scripts/sql.py "select ccs_1_desc, count(*) from stg_ccs group by 1 order by 2 desc"
   python scripts/sql.py -f sql/ccs_level1_counts.sql
 """
 
@@ -13,21 +14,7 @@ from __future__ import annotations
 import sys
 from pathlib import Path
 
-import duckdb
-
-ROOT = Path(__file__).resolve().parents[1]
-RAW, CACHE = ROOT / "data" / "raw", ROOT / "data" / "cache"
-
-
-def connect() -> duckdb.DuckDBPyConnection:
-    con = duckdb.connect()
-    names = {p.stem for p in RAW.glob("*.csv")} | {p.stem for p in CACHE.glob("*.parquet")}
-    for name in sorted(names):
-        pq, csv = CACHE / f"{name}.parquet", RAW / f"{name}.csv"
-        csv_opts = "header = true, all_varchar = true, quote = '\"', escape = '\"'"
-        src = f"read_parquet({str(pq)!r})" if pq.exists() else f"read_csv({str(csv)!r}, {csv_opts})"
-        con.execute(f"create or replace view {name} as select * from {src}")
-    return con
+from oscar_cs.db import connect
 
 
 def main() -> int:

@@ -32,3 +32,6 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   Claude Code" footer.
 - **2026-11-01** — Model split: Lauren brainstorms with Opus 5.5; any code in this repo
   is written by Fable 5 or 5.1.
+- **2026-11-02** — Lauren reviews SQL by running it in VS Code through a db extension
+  (SQLTools + DuckDB driver) with visible table output. Keep `make db` working
+  (self-contained duckdb file; rebuild after model changes).

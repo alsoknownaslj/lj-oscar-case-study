@@ -1,0 +1,3 @@
+{
+  "recommendations": ["mtxr.sqltools", "evidence.sqltools-duckdb-driver"]
+}
