@@ -146,3 +146,9 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   Rejected: training on claims-only members (empty rx feature rows), prospective split
   (listed under "more time" — different claim, needs year-based splits), tree models /
   tuning (time box; the linear coefficients double as the pharmacology sanity check).
+- **2026-11-02 — Final deliverable = the combined report (Lauren).**
+  `reports/2026-11-02_case-study-report.md` merges the house-skeleton draft (format,
+  bullets, succinctness) with the template draft's methodology and limitations, plus
+  an AI-setup section and a collaboration appendix she asked for. Rejected: the
+  template's exec summary, intro/background and recommendations sections. The two
+  earlier drafts stay on main as history; deleting them is her call.

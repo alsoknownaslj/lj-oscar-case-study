@@ -71,3 +71,14 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   `references/` (outline verbatim, PDF under samples/). Register per the example:
   narrated prose, numbered figures with captions ("Figure N: ..."), methods as plain
   steps. House rules still apply on top: first person, humanize pass, no member rows.
+- **2026-11-02 (final report round)** — Report rules for the Oscar deliverable: no
+  semicolons; bullets welcome; succinct; minimal jargon (technical terms only when
+  needed, explained once); conclusions explicit (a conclusion line per part);
+  audience = a data team at a health tech company, not an academic paper; easy to skim
+  and easy for her to talk through, every decision justified with its evidence.
+  Structure: Summary (her ask: a cleaner name than TL;DR) → Approach & methodology
+  (definition, decision→evidence, data/cleaning, AI agent + repo setup as a strength) →
+  Results (Part 1 setup+findings, Part 2 setup+findings, captioned figures) →
+  Limitations → What more time buys → Open questions → Appendix (reproduction,
+  caveats + masked examples, code excerpts, AI collaboration with paraphrased prompts).
+  Cut as superfluous: exec summary, intro/background, the template's recommendations.

@@ -41,7 +41,7 @@ inside it.
 
 **What is not a condition.** Z-codes (250,060 lines of encounters, screenings and
 administrative contact) and immunizations/screening (29,164 lines) are excluded; one of
-them would otherwise be the #1 "condition," touching 53.9% of members. R-codes are
+them would otherwise be the #1 "condition," touching 52.9% of members. R-codes are
 different. They are symptoms that could mean something, so they get their own track:
 present for 50,525 members (20.6%), persistent (a span over 180 days) for 3,491. The
 Residual chapter (31,625 lines) and unmapped codes (1,990 lines, 216 distinct codes,
@@ -188,5 +188,5 @@ Masked vignettes (the characterization's round-trip test):
   symptoms on 1 day; 10 claim days 2016-05 → 2018-02.*
 - *Member B: chronic cerebrovascular disease, heart disease, anxiety disorders (+31
   more); episodes including respiratory infections and fractures; 312 claim days
-  2015-10 → 2017-01.* (The >p99-on-both-axes segment looks like this.)
+  2015-10 → 2017-01.* (Member B has no in-window fills, one of the 426 high-claims, zero-fill members.)
 - *Member C: above, in finding 4.*

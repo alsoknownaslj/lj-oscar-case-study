@@ -98,3 +98,9 @@ detail lives in `reports/2026-11-02_eda-session.md`.)
   immunizations 29,164 / residual 31,625 / unmapped 1,990. All EDA cross-checks
   (union 282,734 split, p99 63/94, 518 joint-p99 vs 19.6) reproduced exactly in the
   rebuilt pipeline.
+- **2026-11-02** — The most multimorbid claims member (34 chronic conditions, 914 claim
+  lines = the max) has **zero in-window fills**: a high-dx / no-rx discordant member,
+  not part of the joint >p99 segment. An earlier draft captioned them as that segment
+  without checking. Verified in member_health_status.parquet (rx_fills 0,
+  dx_above_p99 True, rx_above_p99 False). Rule: verify a vignette's flags before
+  attaching any segment claim to it.

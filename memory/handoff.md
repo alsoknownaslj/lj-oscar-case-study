@@ -9,7 +9,9 @@ requirements built, final report written). The 72-hour window closes 5pm today
 
 ## Where things stand
 
-- **Two final-report drafts are on main, Lauren picks**: the house-skeleton one
+- **THE DELIVERABLE is `reports/2026-11-02_case-study-report.md`** (Lauren's combined
+  structure, humanized, no semicolons). The two drafts below are superseded history.
+- **Two earlier final-report drafts remain on main**: the house-skeleton one
   (`reports/2026-11-02_final-report.md`) and the template-structured one
   (`reports/2026-11-02_data-analysis-report.md`, per `references/report-outline-template.md`
   + the Team-5 example PDF she uploaded late in the day — both now in references/).
