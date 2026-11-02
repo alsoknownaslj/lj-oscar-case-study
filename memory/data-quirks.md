@@ -77,3 +77,14 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   respiratory infections 16.3%. Caveat: measures ANY fill after (not a matching drug), so
   no-fill rates are lower bounds on drug-free management. This is req-2's predictability
   tiering, derived empirically.
+- **2026-11-02** — Fills are tightly claim-anchored: for both-table members (fills
+  2016-09+, full 365d lookback inside claims coverage) median gap to the last prior claim
+  is **11 days**; only 7.7% of fills lack any claim in the prior year (12.0% lack a
+  condition claim). Unpreceded skews to maintenance therapy (vaccines 13.5%,
+  contraceptives 12.7%, ADHD 12.6%, antipsychotics/antidepressants ~11%) while acute
+  categories are visit-glued (cough/cold, urinary anti-infectives, fluoroquinolones,
+  antiemetics: ~3% unpreceded, median gap 0 days). Structurally unprecedented: rx-only
+  members' 255,852 fills (8.5% of all) — and their mix is NOT healthy-light: antidepressants
+  #1, plus antihypertensives, antidiabetics (2,409 members), anticonvulsants, thyroid.
+  (Counted 46,446 rx-only here vs 46,445: M0061560's single claim is pre-2015.) Also
+  10.4% of all fills predate claims coverage entirely (before 2015-09) — left-censored.
