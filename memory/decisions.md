@@ -136,3 +136,13 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   claims-only so the requirement-2 model isn't graded on its own inputs. Rejected: the
   11-01 chronic rule (2+ dates >=30d apart), since 44% of what it called chronic were
   bounded arcs.
+- **2026-11-02 — Requirement-2 baseline (built per Lauren's approved plan).** One L2
+  logistic regression per top-15-chronic condition (one-vs-rest); labels = v2 chronic
+  flags (claims-only); features = log1p drug_class fill counts + totals (rx-only);
+  192,830 both-feed members split 80/20 by member; AUROC+AUPRC vs prevalence baseline;
+  same-period inference stated as such. The 37,583 rx-only members ship as ranked
+  scores/expected counts, not thresholded labels (rank separation 40x on the
+  antidiabetic check; absolute probabilities inherit the rare-label base rate).
+  Rejected: training on claims-only members (empty rx feature rows), prospective split
+  (listed under "more time" — different claim, needs year-based splits), tree models /
+  tuning (time box; the linear coefficients double as the pharmacology sanity check).

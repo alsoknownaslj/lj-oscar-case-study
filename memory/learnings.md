@@ -83,3 +83,14 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   `disable-model-invocation: true` (i-have-adhd is one) are slash-only and never show up
   in the model-facing skill list — check `~/.claude/skills/` before concluding one is
   missing.
+- **2026-11-02 (final build)** — pandas-3 arrow-backed Index trips sklearn's
+  `train_test_split` (`pyarrow ... only integer scalar arrays`): call `.to_numpy()` on
+  the ids first. Notebook tooling (`nbformat`/`nbclient`/`ipykernel`) is NOT in
+  requirements.txt — install ad hoc to execute notebooks headless; nbclient execution ==
+  restart-and-run-all, so it satisfies the commit convention. duckdb named `$params`
+  reject extras: pass exactly the params each query uses.
+- **2026-11-02 (final build)** — Model honesty pattern that worked: for rare labels
+  (0.7–2.7% prevalence), report rank separation AND absolute calibration separately —
+  rx-only members on ≥3 antidiabetic fills scored 40x the median of the rest while
+  absolute probabilities stayed ~0.03, so ranked lists/expected counts are the shippable
+  artifact, never a 0.5 threshold on a rare-label probability.
