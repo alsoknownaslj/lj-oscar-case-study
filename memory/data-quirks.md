@@ -138,3 +138,18 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   chronic); mood/anxiety look arc-y in claims (<9% continuous) though clinically chronic —
   their chronicity lives in rx (SSRIs/antidepressants are top sustained classes), so
   claims-shape needs rx corroboration for psych + recurrent-infection categories.
+- **2026-11-02** — Joint claims×rx EDA (canonical window). Fills/member separates
+  maintenance from acute within the top classes: statins 4.1, SSRIs 4.9, thyroid 5.1,
+  ADHD amphetamines 6.1 vs NSAIDs 1.9, glucocorticoids 1.6. Refill buckets (member×class
+  pairs: 72.6% 1-2 fills / 13.3% 3-4 / 14.1% 5+): SSRIs 33.5% 5+, statins 29.7%, ACE 29.3%
+  vs antibiotics ≈1%, vaccines 0.2%. Caveat: PRN/inhaler classes (nasal steroids, beta
+  adrenergics 6.7% 5+) read acute by fill counts though asthma is chronic — one inhaler
+  lasts months. Median-split tiers (distinct L2 conditions, med=2; distinct classes,
+  med=3) over the 282,734 in-window union: high-dx×high-rx corner = 22.4%; concordant
+  low/none mass ≈27%; discordant extremes are symmetric and real — 6,133 members high-rx
+  with NO claims and 6,253 high-dx with NO fills (2.2% each). Spearman ρ(conditions,
+  classes)=0.543 among both-table members. Condition×class LIFT heatmap confirms wiring:
+  metformin×diabetes 8×, antidepressants×mood 7×, urinary anti-infectives×urinary 7×,
+  ophthalmic antibiotics×eye 6×, thiazides×hypertension 5×, opioids/muscle-relaxants×
+  fractures/back ~5× (injuries DO have an rx tie, but non-specific analgesia);
+  screening/respiratory rows run slightly BELOW 1× against cardiometabolic classes.
