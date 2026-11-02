@@ -35,3 +35,10 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
 - **2026-11-02** — Asked for a dense chat explanation rewritten "for ADHD": answers first,
   short chunks, bullets, bold anchors, one clear next action. Default chat explainers to
   that shape (reports keep their own style rules).
+- **2026-11-02 (EDA day)** — Process: EDA together BEFORE committing to a definition;
+  reopened the req-1 framing rather than ratifying it. Wants distributions shown as they
+  are: per-group quantiles over pooled bins, "actual probability distribution" over
+  absolute cutoffs, single-variable charts first and combinations after. Rejected
+  median and quartile tiering; wants principled low/med/high bins (next session).
+  Utilization relationship questions should use volumes (repeats included), not distinct
+  counts. Comfortable with log-log/CCDF plots once explained; liked Pareto overlays.

@@ -3,57 +3,54 @@
 _Rewrite this file whole (never append) at the end of a session or when direction changes.
 It is the baton: the next session reads it before doing anything._
 
-**As of 2026-11-01 (requirement-1 analysis session, cloud).**
+**As of 2026-11-02 (two-day EDA session with Lauren, closed cleanly, merged to main).**
 
 ## Where things stand
 
-Requirement 1 is built and written up, on branch **`req1-health-status`** (pushed; not
-merged to main — Lauren reviews first). The session was handed a `claude/...` branch and
-moved to a descriptive one per the CLAUDE.md branch must.
+Lauren reopened the requirement-1 framing before ratifying it and ran a collaborative
+EDA-first pass instead. Everything from both days is merged to `main`.
 
-- **Characterization (proposed, pending Lauren's ratification — see memory/decisions.md
-  2026-11-01):** per-member CCS level-2 condition flags, chronic (≥2 dates ≥30 days
-  apart) vs one-off; Symptoms/Z-code + Residual chapters tracked but never conditions;
-  unmapped codes an explicit counted bucket. Headlines: 245,165 members characterized,
-  35.1% with ≥1 chronic condition, median 2 conditions, 99.89% CCS row coverage.
-- **Code:** `scripts/build_health_status.py` (pipeline + stats + 3 deterministic
-  vignettes) → `data/processed/{member_conditions,member_health_status}.parquet` +
-  `health_status_stats.json` (all local-only; rebuild anytime). Policy constants in
-  `src/oscar_cs/health_status.py`; parameterized queries in `sql/`; shared duckdb views
-  in `src/oscar_cs/db.py` (scripts/sql.py now uses it). Tests cover the chronic rule
-  incl. a SQL↔Python parity check (`make test`: 10 pass).
-- **Report (humanize pass done):** `reports/2026-11-01_health-status-characterization.md`
-  + 2 figures (dataviz-skill palette, validated). Vignette member ids masked there; the
-  build script prints real ones.
-- **Doc corrections:** claims volume ramps from **2015-09** (not 2015-12) — CLAUDE.md,
-  data dictionary and data-quirks updated; new junk codes `99999`/`KHDX` logged.
+- **The findings home is `reports/2026-11-02_eda-session.md`** (humanized, 8 findings,
+  2 logged decisions, next-session agenda). Every number reproduces from
+  `scripts/eda/*.py`; all session figures are in `reports/figures/` under the
+  `2026-11-02_eda-session_` prefix. `memory/data-quirks.md` was compacted to a digest
+  that points there.
+- **Decisions in force:** canonical analysis window **[2015-09-01, 2018-06-04]**
+  (`ANALYSIS_WINDOW_*` in `src/oscar_cs/health_status.py`); median and quartile tier
+  binning rejected. **Pending Lauren:** the outlier policy (percentile fences, >p99
+  high-utilizer flag, remove nobody) and the whole health-status definition.
+- **The requirement-1 draft still exists** (pipeline `scripts/build_health_status.py`,
+  report `reports/2026-11-01_health-status-characterization.md`) but its framing is
+  explicitly reopened and its numbers predate the canonical window — treat it as a
+  prototype to rebuild once the definition lands, not as the baseline.
 
-Environment notes: fresh container rebuilt cleanly (`make fetch cache profile` — profile
-reproduced the dictionary byte-identically; Drive domains were allowed). The 72-hour
-window question is Lauren's to track; analysis work started this session on her go-ahead.
+## Next session agenda (Lauren's words, 2026-11-02)
 
-## Next concrete step
-
-1. **Lauren reviews** the report + framing (ratify or amend the 2026-11-01 decision;
-   likeliest amendment: re-bucket "Immunizations and screening" out of conditions — it's
-   #1 in "What more time buys").
-2. **Requirement 2 (rx-only model):** labels come from `member_health_status.parquet` /
-   `member_conditions.parquet` (rebuild via `python scripts/build_health_status.py`).
-   Guardrails: CLAUDE.md common mistakes 4–6 and 8 (member-level split, rx-only features,
-   multi-label one-vs-rest, window alignment — rx ends 2018-06, 6 months before claims).
-   Drug→condition strength tiers: `references/domain-notes.md` + healthcare-claims skill.
-   Mechanics: `data:analyze` + `data:statistical-analysis`. Target conditions to start:
-   chronic flags for drug-managed conditions (diabetes, hypertension, lipid disorders,
-   asthma/COPD, mental illness, cancer) — expect performance to follow the tier ladder.
-3. **Final deliverable assembly** (after req 2): supporting notebook that reproduces
-   every number (jupyter isn't in requirements.txt — uncomment/add when needed), then a
-   combined ~2-page report per references/report-style.md.
+1. **Bins:** design non-arbitrary low/med/high bins for diagnostic-claim volume, fill
+   volume, and the claims×rx contingency table. Median splits (empty mid bin) and
+   quartiles (ties collapse: the median pair is a single touch) are out. Candidates to
+   evaluate: log-scale natural breaks, mixture models, clinically anchored cuts.
+2. **Reconvene the health-status definition** with the evidence stacked (details in the
+   EDA report): repetition shapes support chronic/episode/one-off; the draft chronic
+   rule decomposes 44% arc / 39% recurrent / 16% continuous; "recurrent" needs rx
+   corroboration or category priors (reinfection trap); psych chronicity lives in rx,
+   not claims; immunizations/screening has five independent strikes against being a
+   condition; the symptom-only tier question is open; rx sustained-therapy (≥3 fills
+   ≥90d) is the natural rx-side chronicity flag.
+3. **Requirement 2** follows: labels from the ratified definition; 37,583 in-window
+   rx-only members are the scoring population; the no-fill ranking is the empirical
+   predictability map. Guardrails stay CLAUDE.md mistakes 4–6 and 8.
 
 ## Fresh-container notes
 
-- `pip install -r requirements.txt && pip install -e .`
-- `make fetch` (needs Drive link-sharing + the two Drive domains allowed — both held on
-  2026-11-01), `make cache`; `make profile` only to re-verify.
+- `pip install -r requirements.txt && pip install -e .`; data: `make fetch cache`
+  (needs the two Drive domains allowed; parquet cache sometimes survives a container
+  pause while raw CSVs do not — `connect_views` prefers the cache, so check
+  `data/cache/` before re-fetching).
 - Commits: identity `Claude <noreply@anthropic.com>`; branch names descriptive, never
-  `claude/...`; no PRs unless Lauren asks.
-- `/fill-blanks`, `/retro`, `/remember` + humanize hooks register in sessions on this repo.
+  `claude/...`; no PRs unless Lauren asks. The 2026-11-01/02 work went to
+  `req1-health-status`, now merged to `main`.
+- Chat style for Lauren: answers first, short chunks, bold anchors, one clear next
+  action (see preferences 2026-11-02 for her analysis-style calls).
+- The 72-hour case-study window is Lauren's to track; requirement-2 modeling has not
+  started.

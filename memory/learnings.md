@@ -45,3 +45,12 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   never copy its values into hand-written docs as fact (that's how 90/477/684 drug
   hierarchy counts went wrong; exact is 92/464/687). Exact-verify any distinct count
   before documenting it — mistake 12 applies to our own tooling, not just ad-hoc queries.
+- **2026-11-02** — duckdb ASOF JOIN is the right tool for nearest-event linkage
+  (last claim before each fill): `asof left join ... on a.m = b.m and b.d <= a.d` picks
+  the greatest earlier date with no row explosion. Also: scipy `hierarchy.leaves_list`
+  on log-lift matrices gives clean cluster-ordered heatmaps without committing to a
+  clustering model.
+- **2026-11-02** — Interactive-EDA workflow that worked: scratchpad scripts during the
+  conversation, then promote to `scripts/eda/` (figures re-pointed to
+  `oscar_cs.paths.FIGURES` with a session prefix) + one milestone report so every number
+  stays reproducible. Watch for `savefig(OUT / fname)` variable paths when batch-editing.

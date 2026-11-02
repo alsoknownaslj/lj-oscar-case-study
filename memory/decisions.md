@@ -75,3 +75,16 @@ One dated entry per decision. Don't re-litigate without Lauren reopening it.
   recency-sensitive measures. Rejected: left-edge-only alignment (keeps a phantom
   rx-less claims tail that turned out to be 6 rows); per-analysis ad-hoc windows (the
   drift we were already accumulating).
+- **2026-11-02 — Tier binning: median and quartile cuts rejected (Lauren).** Median
+  splits leave a near-empty "mid" bin on tied integer counts; pooled quartiles collapse
+  (the median member×class and member×condition pair is a single touch). Next session
+  designs principled low/med/high bins for diagnostic-claim volume, fill volume, and the
+  claims×rx contingency table — candidates: log-scale natural breaks, mixture models,
+  clinically anchored cuts. Nothing binned is final until then.
+- **2026-11-02 — Outlier policy (proposed by session; pending Lauren).** Remove no
+  members: the extreme tail is a jointly structured sub-population (518 members above
+  p99 on both volume axes vs ~19 under independence) and the brief asks for unusual-
+  pattern detection, so it is a segment/deliverable. Use percentile fences, never raw
+  IQR/z-scores (IQR flags ~10% here); default to rank/quantile statistics; cap displays
+  at p99 with explicit labels; flag >p99 members as high utilizers. Rejected: trimming,
+  winsorizing analysis data, raw-scale IQR fences.
