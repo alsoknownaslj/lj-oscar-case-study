@@ -35,3 +35,10 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
 - **2026-11-02** — Lauren reviews SQL by running it in VS Code through a db extension
   (SQLTools + DuckDB driver) with visible table output. Keep `make db` working
   (self-contained duckdb file; rebuild after model changes).
+- **2026-11-02 (soul.md round)** — Communication: Lauren has ADHD and wants sessions
+  deliberately good at writing to her — answer first, one thing at a time, no walls of
+  text, next action explicit. Method explanations stay lightly technical (a small formula
+  or the right term where it earns its keep; no heavy math, no word-heavy derivations).
+  Results honesty is absolute: never lie about or shade a result. She also wants the
+  agent known for catching unusual-but-critical findings others would skim past. All
+  folded into `soul.md` the same day.
