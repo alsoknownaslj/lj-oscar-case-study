@@ -47,3 +47,17 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   18.1% of kept claim rows, and its "Factors influencing health care" category alone
   touches **53.9% of members** — left in, it would be the #1 "condition" (2× respiratory
   infections). Residual chapter: 1.6% of rows. Both bucketed out of condition flags.
+- **2026-11-02** — Correction: Residual-chapter `ccs_2_desc` is a **single space `' '`**,
+  not an empty string — `nullif(x, '')` and `== ''` miss it; strip/trim first. (Yesterday's
+  pipeline bucketed by chapter name, so unaffected.) No level-2 name spans two chapters;
+  Residual has no level 2 but **22 level-3 categories** (level 3 is never blank).
+- **2026-11-02** — **Zero exact duplicate claim lines**: no (member_id, date_svc, diag1)
+  group has >1 row in all 1,919,983 rows. A claims row IS a distinct member-day-diagnosis
+  fact; no dedup step needed (and the absence of resubmission dupes is a synthetic tell).
+- **2026-11-02** — Member id space is the real universe: ids `M0000001..M0291614`,
+  **291,611 of 291,614 used** across the two tables (unused: M0059615, M0068175,
+  M0200192). Split: 194,290 both / 50,876 claims-only / 46,445 rx-only, uniform across
+  the id range. Table membership is strongly negatively correlated (independence predicts
+  ~8.1k members in neither, observed 3): the generator gave essentially everyone ≥1 event,
+  so there is **no observable zero-utilization population**, and the brief's "200,000
+  members" is really ~291.6k.

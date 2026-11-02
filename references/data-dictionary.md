@@ -14,7 +14,7 @@ don't edit inside it. All schemas below were **verified against the full files o
 | `diag` | str | ICD-10-CM, **undotted**, 3–7 chars, unique (`A000` … `Z9989`) |
 | `diag_desc` | str | description; contains commas (quoted in CSV) |
 | `ccs_1_desc` | str | level 1 — 18 chapters |
-| `ccs_2_desc` | str | level 2 — 136 values; **blank on 7,621 rows** (exactly the Residual chapter); ~44% embed a code like `[135.]` |
+| `ccs_2_desc` | str | level 2 — 135 real values; **a single space `' '` (not `''`) on the 7,621 Residual rows** — strip before testing; ~44% embed a code like `[135.]` |
 | `ccs_3_desc` | str | level 3 — 281 values, never blank; often equals level 2 |
 
 Quirks: semicolons replace commas inside descriptions (never split on `;`); the Residual

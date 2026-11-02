@@ -59,7 +59,7 @@ overwrite a raw file; derive into `data/cache/` (faithful parquet) or `data/proc
 | `diag` | str | ICD-10-CM code, **no dot**, 3–7 chars, **unique** — safe join key |
 | `diag_desc` | str | code description |
 | `ccs_1_desc` | str | level 1 — 18 chapters |
-| `ccs_2_desc` | str | level 2 — 136 values; **blank (empty string) for the 7,621 Residual-chapter codes**; ~44% embed a code like `[135.]` |
+| `ccs_2_desc` | str | level 2 — 135 real values + a filler; **a single space `' '` (not `''`!) for the 7,621 Residual-chapter codes** — strip before testing blankness; ~44% embed a code like `[135.]` |
 | `ccs_3_desc` | str | level 3 — 281 values, never blank; often repeats level 2 |
 
 No true nulls. `src/oscar_cs/data.py::parse_ccs2_code` extracts the bracket codes.
