@@ -17,7 +17,7 @@ The IDE-SQL work is merged to `main`: `make db` writes a self-contained
 order. `dim_members`/`fct_*` stay unported — framing is not pre-committed
 (memory/decisions.md 2026-11-02).
 
-New this session (branch `agent-soul-md`, awaiting Lauren's review/merge): `soul.md` at
+New this session (merged to `main` 2026-11-02): `soul.md` at
 the repo root — who the analyst is (stance, evidence habits, voice), auto-imported by
 CLAUDE.md; CLAUDE.md remains the operational contract and wins on conflict. All its
 blanks are filled (fill-blanks, 2026-11-02): the pair is named **Ada** (chat only; commit
