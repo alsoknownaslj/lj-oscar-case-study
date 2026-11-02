@@ -46,3 +46,10 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   only `.vscode/extensions.json` is committed (`.vscode` stays gitignored otherwise).
   Ported from `oscar-case-study` commit 48ddedb; verified here by opening the file with
   duckdb 1.3.2 and running every view (99.89% coverage reproduced).
+- **2026-11-02** — Cloud containers are ephemeral, so a plugin installed during a session
+  is gone in the next one. Persistence = one line in the environment's setup script
+  (environment menu → Edit → Setup script):
+  `claude plugin install --marketplace ayghri/i-have-adhd i-have-adhd` (Lauren's
+  output-formatting plugin; vetted at v0.4.1, commit 1ecea19 — a markdown skill plus an
+  opt-in SessionStart hook, no network calls or writes). Also: a plugin installed
+  mid-session registers only at the next CLI startup, never in the running session.
