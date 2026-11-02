@@ -118,3 +118,9 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   drug_class saturates (top 100 = 87% of fills) while NDC is flat (top 100 = 19%) and raw
   diag codes middling (top 1,000 = 78% of rows) — class is the right rx feature grain,
   NDC unusable, and claims-side grouping (CCS) is similarly justified empirically.
+- **2026-11-02** — Pareto check on code frequencies (CCDF log-log + Hill MLE): diagnostic
+  codes have a genuine **Pareto tail (α≈2.2 for the ~475 codes with ≥712 rows**, straight
+  over two decades, KS 0.024) with a lognormal-ish body (μ=2.1, σ=1.9). Drug classes are
+  NOT convincingly Pareto: lognormal (μ=5.1, σ=3.0) tracks them better and the tail is
+  truncated (only 669 values, finite window). Both are heavy-tailed either way — the
+  practical Pareto-principle concentration holds regardless of the parametric family.
