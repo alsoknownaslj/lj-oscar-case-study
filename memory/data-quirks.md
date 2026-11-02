@@ -171,3 +171,11 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   therapy, but dx line-depth does NOT separate chronic from episodic (visit-dense back/
   joint episodes top the table) — repetition SHAPE, not volume, carries the claims-side
   chronicity signal.
+- **2026-11-02** — Per-group (unpooled) quantiles, fills/lines per member: rx classes
+  stratify by their own medians — maintenance (SSRIs/statins/ACE: p50=3, p75=5–6, p90=9–11),
+  intermittent (benzos/PPIs: p50=2), one-shot (NSAIDs/steroids/inhalers p75=2; antibiotics
+  & vaccines p75=1). Dx conditions: only back problems have median 2 lines (p90=10,
+  visit-dense episodes); hypertension's p90 user has just 4 lines vs its drug counterpart's
+  9 fills — for chronic conditions pharmacy cadence ≫ visit cadence, episodes reverse it.
+  Immunizations/screening flattest again (p75=1). Tail curiosities: one member with 404
+  urinary-system lines; heart max 278.
