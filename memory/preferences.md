@@ -82,3 +82,9 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   Limitations → What more time buys → Open questions → Appendix (reproduction,
   caveats + masked examples, code excerpts, AI collaboration with paraphrased prompts).
   Cut as superfluous: exec summary, intro/background, the template's recommendations.
+- **2026-11-02 (report edit round)** — Lauren's line edits to the deliverable: the
+  Summary is prose paragraphs (the one section she wants without bullets, her own
+  text); section names "General framework", "Defining health status", "Utilizing
+  agentic AI", "Reproducing results"; limitations without bold lead-ins; no Open
+  questions section; no example members in the appendix; she writes the example
+  prompts herself. Typos in her edits get fixed and flagged, not silently kept.

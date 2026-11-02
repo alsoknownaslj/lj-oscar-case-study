@@ -4,31 +4,33 @@
 
 ## 1. Summary
 
-- **How I define health status:** each member is a set of clinical conditions from their
-  claims, and each condition is tagged by its pattern over time as one-off, episode, or
-  chronic. Symptoms are tracked separately, and administrative codes don't count as
-  conditions.
-- **Most members are light users around a chronic core.** 15.2% of the 245,151 members
-  with claims have at least one chronic condition. The typical member has 2 conditions
-  and 4 claim lines over almost three years.
-- **Prescriptions alone recover chronic status well.** A simple model per condition ranks
-  a member who has the condition above one who doesn't 80% to 97% of the time, and its
-  flagged lists are 8 to 41 times more precise than random picks. It works best for
-  conditions managed with drugs, such as diabetes, hypertension, and thyroid disease.
-- **The model learns the drugs, not just the volume.** For 14 of 15 conditions, knowing
-  which drugs a member fills makes the flagged lists 2 to 5.8 times more precise than
-  knowing only how much they fill.
-- **Use it to rank members, not to label them.** For the 37,583 members with
-  prescriptions but no claims, a ranked list per condition is reliable (for example,
-  about 242 expected members with chronic hypertension). A yes/no cutoff isn't.
-- **Two groups are worth a closer look:** 4,941 members with symptoms but no diagnosed
-  condition, and 765 members who are heavy users of one data feed but absent from the
-  other. They are candidates for two uses the brief names: members not getting needed
-  care, and unusual care patterns.
+In this case study, I characterized each of the 245,151 members as a set of clinical
+conditions from their claims. Each condition is tagged by its pattern over time as one-
+off, episode (a bounded burst of care), or chronic (contact spanning more than 180
+days). Symptoms are tracked separately, and administrative codes don't count as
+conditions. About 15% of members with claims have at least one chronic condition. The
+typical member has 2 conditions and 4 claim lines over almost three years.
+
+A simple model (logistic regression) per condition ranks a member who has the condition
+above one who doesn't 80% to 97% of the time, and its flagged lists are 8 to 41 times
+more precise than random picks. It works best for conditions managed with drugs, such as
+diabetes, hypertension, and thyroid disease.
+
+For 14 of 15 conditions, knowing which drugs a member fills makes the flagged lists 2 to
+5.8 times more precise than knowing only how much they fill.
+
+For the 37,583 members with prescriptions but no claims, a ranked list per condition is
+reliable (for example, about 242 expected members with chronic hypertension). A yes/no
+cutoff isn't.
+
+Finally, it's worth taking a closer look at 4,941 members with symptoms but no diagnosed
+condition, and 765 members who are heavy users of one data feed but absent from the
+other. They are candidates for two uses the brief names: members not getting needed
+care, and unusual care patterns.
 
 ## 2. Approach and methodology
 
-### The framework at a glance
+### General framework
 
 1. **Clean the data and fix the time window,** counting every exclusion.
 2. **Sort every diagnosis line** into a condition, a symptom, or an excluded
@@ -42,15 +44,13 @@
 6. **Test the model against a volume-only version,** then score the members who have
    prescriptions but no claims.
 
-### How I define health status
+### Defining health status
 
 A member's health status has five parts:
 
-- **Conditions:** the clinical categories in their claims. I map ICD-10 diagnosis codes
-  to CCS (Clinical Classifications Software, a standard grouping of diagnosis codes) at
-  its middle level, which has about 135 categories such as "Hypertension" and
-  "Fractures."
-- **A shape for each condition,** from the member's distinct claim dates for it:
+- **Conditions:** I used the Level 2 CCS (Clinical Classifications Software) codes to
+  define the clinical categories in members' claims.
+- I built the following shapes for each condition from the member's distinct claim dates:
   - **One-off:** a single date.
   - **Episode:** two or more dates within 180 days, like a fracture and its follow-up
     visits.
@@ -58,23 +58,19 @@ A member's health status has five parts:
   - **Exception:** infections and injuries never count as chronic. Repeat respiratory
     infections, for example, are reinfection, not chronic disease. Viral infection is
     exempt because HIV and hepatitis sit inside that category.
-- **Symptoms, tracked separately.** R-codes (symptoms and signs such as abdominal pain
+- **Symptoms are tracked separately.** R-codes (symptoms and signs such as abdominal pain
   or fatigue) could mean something, but they aren't diagnoses.
 - **What doesn't count:** Z-codes (checkups, screenings, and administrative contact),
   immunizations and screening, the unclassified Residual chapter, and codes with no CCS
-  match. Each is counted, and none is silently dropped.
+  match.
 - **Utilization:** tiers for claim lines and prescription fills, plus a flag for the top
   1% of each.
 
-Put together, a member reads as a sentence: *"Member A: chronic blood cancer and chronic
-lower GI disorder, one-off migraine and one-off injury, symptoms on 1 day, 10 claim days
-from 2016-05 to 2018-02."*
-
 ### Why I made these calls
 
-- **CCS middle level.** The top level (18 chapters) hides which condition a member has,
-  and the bottom level splits one condition into sparse categories. The middle level is
-  specific enough to read and common enough to count.
+- **CCS Level 2.** Level 1 (18 chapters) hides which condition a member has, and Level 3
+  splits one condition into sparse categories. Level 2 is specific enough to read and
+  common enough to count.
 - **Shapes instead of the standard chronic rule.** The usual rule (two claims at least
   30 days apart) counts short bursts of care as chronic. In my exploration, 44% of what
   it flagged were bounded sequences like a fracture plus follow-ups.
@@ -95,9 +91,9 @@ from 2016-05 to 2018-02."*
   small values, so median and quartile cuts collapsed into near-empty or duplicate
   bins. Head/tail breaks cut at the mean, then at the mean of everyone above it. The
   cuts land at 7.8 and 20.9 claim lines, and at 11.7 and 31.9 fills.
-- **Remove nobody.** The extreme tail is a real group, not noise: 518 members are in the
-  top 1% of both claims and fills, against about 20 expected by chance. I flag the top
-  1% instead of trimming it.
+- **No member removed.** The extreme tail is non-trivial. 518 members are in the top 1%
+  of both claims and fills, against about 20 expected by chance. So I flagged the top 1%
+  instead of trimming it.
 - **Ruled out:** a single severity score (hides which conditions), clustering on volume
   alone (not clinically readable), and standard outlier cutoffs (they would flag about
   10% of members in tails this long).
@@ -121,12 +117,12 @@ from 2016-05 to 2018-02."*
     maps 99.9% of rows.
   - 1,990 rows with no CCS match (216 codes, mostly junk such as `99999`, `KHDX`, and
     `000`) kept as their own bucket.
-  - All codes read as text, because drug codes have meaningful leading zeros.
 
-### How I set up the AI agent and repo
+### Utilizing agentic AI
 
-I ran this case study with Claude Code as an analyst pair. Most of my effort went into
-the setup, so the agent works like a careful teammate:
+I ran this case study with Claude Code as an analyst pair. I invested time in the setup
+so the agent worked like a collaborator versus just prompting it over and over again
+with the same context. Here's the general architecture:
 
 - **An operating manual (`CLAUDE.md`)** with the brief, a verified data contract
   (schemas, row counts, known errors), and 12 mistakes specific to this dataset that the
@@ -293,24 +289,21 @@ best as a ranked outreach list per condition.
 
 ## 4. Limitations
 
-- **No enrollment data.** A member with no claims may be healthy or may have left the
-  plan, so every volume mixes sickness with time enrolled.
-- **The chronic label is a stand-in.** It means sustained contact with care for a
-  condition, which misses undiagnosed members and anyone treated outside these feeds.
-- **Recognition, not forecasting.** Prescriptions and diagnoses come from the same
-  period, which flatters the model compared with predicting a new member's future.
-- **Late conditions can't be chronic.** A condition first seen in the last 180 days of
-  the window can't reach the chronic span.
-- **The infection and injury rule has a cost.** Tuberculosis and spinal cord injury can
-  never read chronic, while HIV and hepatitis are protected. Clinicians should review
-  that list.
-- **Drugs aren't linked to diagnoses** in this data, so tying a drug to a condition is
+- There's no enrollment data, so a member with no claims may be healthy or may have left
+  the plan, and every volume mixes sickness with time enrolled.
+- The chronic label is a stand-in for sustained contact with care, so it misses
+  undiagnosed members and anyone treated outside these feeds.
+- Prescriptions and diagnoses come from the same period, which flatters the model
+  compared with predicting a new member's future.
+- A condition first seen in the last 180 days of the window can't reach the chronic
+  span.
+- The infection and injury rule means tuberculosis and spinal cord injury can never read
+  chronic, while HIV and hepatitis are protected. Clinicians should review that list.
+- Drugs aren't linked to diagnoses in this data, so tying a drug to a condition is
   approximate.
-- **Model scope.** One train/test split with no confidence intervals or tuning, and 15
-  conditions rather than all. Each condition has about 280 to 1,050 positives in the
+- The model uses one train/test split with no confidence intervals or tuning, and covers
+  15 conditions rather than all. Each condition has about 280 to 1,050 positives in the
   test set, so small differences between conditions shouldn't be over-read.
-- **Synthetic data** with deliberately planted errors, so these numbers aren't
-  real-world rates.
 
 ## 5. What more time buys
 
@@ -330,19 +323,9 @@ best as a ranked outreach list per condition.
 6. **Estimate enrollment** from gaps in activity, to turn counts into rates and soften
    the biggest limitation.
 
-## 6. Open questions
-
-- Is there an enrollment or eligibility table? Without it, "no claims" can't be read.
-- Should drug persistence help define chronic status? Chronic mental health conditions
-  show up mainly in prescription refills here, so a claims-only label undercounts them.
-- Is the infection and injury rule's cost acceptable, or should tuberculosis and spinal
-  cord injury get exemptions like HIV and hepatitis?
-- Prescriptions can't be tied to a specific diagnosis in this data. Is an approximate
-  drug-to-condition map good enough for attribution questions?
-
 ## Appendix
 
-### A. Reproducing the numbers
+### A. Reproducing results
 
 All code lives in the project repo, and paths are relative to its root.
 
@@ -360,25 +343,14 @@ All code lives in the project repo, and paths are relative to its root.
 - 11 unit tests pin the rules, including the 180/181-day boundary, the infection and
   injury cap, the tier cuts, and agreement between the SQL and Python versions.
 
-### B. Data caveats and example members
+### B. Data caveats
 
 - Exclusions: 24 null-date rows, 201 rows before the window, and 6 after it, for 231
   claim rows (0.012%) and 15 members.
 - Prescription history before September 2015 (10.4% of fills) is left out.
 - The data is synthetic and dirty by design, with 1899 placeholder dates, junk codes,
   and a code with a comma inside quotes. Handling is logged in `memory/data-quirks.md`.
-- Member-level data stays local, and the examples below use masked labels.
-
-Example members, as the definition describes them:
-
-- **Member A:** chronic blood cancer and chronic lower GI disorder, one-off migraine and
-  one-off injury, symptoms on 1 day, 10 claim days from 2016-05 to 2018-02.
-- **Member B:** 34 chronic conditions, including cerebrovascular disease, heart disease,
-  and anxiety, plus episodes of respiratory infection and fracture, across 312 claim days
-  from 2015-10 to 2017-01. Member B has no prescription fills in the window, which makes
-  them one of the 426 members with heavy claims and no fills.
-- **Member C:** no conditions, persistent symptoms on 8 days, 8 claim days from 2016-07
-  to 2017-01.
+- Member-level data stays local.
 
 ### C. Code excerpts
 
@@ -518,24 +490,3 @@ def test_head_tail_cuts_ties_cannot_collapse_tiers():
 - The agent checked its own work. While preparing my walkthrough, it caught a wrong
   sentence about calibration in an earlier draft, and it proposed the volume-only check
   that confirmed the model learns from the drugs themselves.
-
-**Example prompts (paraphrased)**
-
-1. *"Check the handoff doc and tell me if you have questions."* The agent verified the
-   handoff against the repo, found a branch that had never been merged, and came back
-   with three questions, each with a recommended answer.
-2. *"When we're planning, use Opus at max effort. For any code writing or review, use
-   Fable."* The agent saved this to project memory, so later sessions flag a mismatch
-   before starting.
-3. *"Head/tail bins. Z-codes, immunizations, and unmapped codes aren't conditions.
-   R-codes are symptoms that could mean something, so call them something else."* This
-   became the symptoms track and the exclusion rules.
-4. *"The reinfection rule is fine, but note it for the report."* Its cost appears in the
-   limitations.
-5. *"Tell me which model you used and why. We're collaborators."* and *"I don't know
-   AUROC and AUPRC, and I need to walk a data scientist through this."* The
-   plain-language walkthrough surfaced the calibration error and the volume question,
-   and both were resolved before this report.
-6. From earlier sessions: *"Show me the actual distributions, single-variable charts
-   first, then combinations,"* and later *"quartiles were too messy,"* which led to
-   head/tail breaks.
