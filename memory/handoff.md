@@ -15,10 +15,11 @@ requirements built, final report written). The 72-hour window closes 5pm today
   (executed clean, masked ids only). Figures: `reports/figures/2026-11-02_final_fig01–04`.
 - **Deleted at Lauren's request (2026-11-02, after the deadline):** the two superseded
   drafts (`2026-11-02_final-report.md`, `2026-11-02_data-analysis-report.md`) and the
-  EDA-days session log (`2026-11-02_session-export.md`), on branch
-  `remove-superseded-reports` with the PR left open and unmerged by her instruction. Git
-  history keeps all three. The EDA findings report (`2026-11-02_eda-session.md`) stays,
-  by her call.
+  EDA-days session log (`2026-11-02_session-export.md`), via PR #1, which Lauren
+  merged. Git history keeps them. The EDA findings report (`2026-11-02_eda-session.md`)
+  stays, by her call. The session log also sits alone on the unmerged branch
+  `session-log-export` (made by the parallel EDA-days session): never merge it, since
+  session logs stay out of the repo (preferences, 2026-11-02).
 - **Health status v2 is ratified and implemented** (rules in `memory/decisions.md`
   2026-11-02): member × CCS level-2 conditions shaped one_off/episode/chronic (180d
   span boundary), reinfection-trap cap (injuries + infections never chronic; Viral
