@@ -10,8 +10,8 @@ member as a set of clinical conditions shaped by their claim-date pattern (one-o
 episode, or chronic) and found a population that is mostly light contact around a
 chronic core: 15.2% of the 245,151 members with usable claims carry at least one chronic
 condition. A simple per-condition logistic regression then recovers chronic status from
-prescription fills alone, at AUROC 0.80 to 0.97 depending on how drug-managed the
-condition is. I recommend shipping the drug-side model as ranked outreach lists for the
+prescription fills alone, at an AUROC (area under the ROC curve) of 0.80 to 0.97,
+depending on how drug-managed the condition is. I recommend shipping the drug-side model as ranked outreach lists for the
 37,583 members who have fills but no claims, and requesting enrollment data before any
 utilization number is read as sickness rather than exposure time.
 
@@ -65,7 +65,8 @@ then at the mean of what lies above), with zero its own tier and a flag above th
 percentile. (4) For the drug-side model, fit one L2 logistic regression per condition
 for the 15 conditions with the most chronic members: labels from claims only, features
 from prescriptions only (log fill counts over 669 drug classes plus totals), split
-80/20 by member, scored by AUROC and AUPRC against the prevalence baseline.
+80/20 by member, scored by AUROC and AUPRC (area under the precision-recall curve)
+against the prevalence baseline.
 
 ## 4. Results & findings
 
@@ -110,8 +111,9 @@ from 2016-07 to 2017-01.
 every condition (Figure 3). Performance follows how drug-managed a condition is, and
 the learned coefficients match the pharmacology: ACE-inhibitor and ARB combinations for
 hypertension, biguanides and SGLT2 inhibitors for diabetes, antithyroid agents for
-thyroid disorders. Calibration tracks the diagonal for the three conditions I checked,
-with mild over-confidence in hypertension's top decile (Figure 4). Applied to the
+thyroid disorders. Calibration tracks the diagonal for the three conditions I checked;
+the largest miss is hypertension's top decile, which runs slightly under (20.5%
+predicted, 22.0% observed; Figure 4). Applied to the
 37,583 prescription-only members, the scores rank well: the 530 such members with three
 or more antidiabetic fills get a median predicted diabetes probability 40 times the
 rest. Absolute probabilities stay low (median 0.027) because the chronic label is rare

@@ -9,8 +9,9 @@ conditions, each shaped by its claim-date pattern: one-off, episode (a bounded b
 care), or chronic (contact spanning more than 180 days). 15.2% of members carry at least
 one chronic condition; the median member has 2 conditions and 4 claim lines over almost
 three years. From prescription fills alone, one logistic regression per condition
-recovers chronic status at AUROC 0.80 to 0.97 (AUPRC 8 to 41 times the prevalence
-baseline), best for drug-managed conditions like diabetes and hypertension, and the
+recovers chronic status with an AUROC (area under the ROC curve) of 0.80 to 0.97 and
+an AUPRC (area under the precision-recall curve) 8 to 41 times the prevalence
+baseline, best for drug-managed conditions like diabetes and hypertension, and the
 learned coefficients are the pharmacology you'd write down by hand. Claims and drug
 utilization are jointly structured: members in the top tier on both axes run 6 times
 independence, and 518 members sit above the 99th percentile on both, against 19.6
@@ -107,8 +108,8 @@ everywhere. The ordering follows how drug-managed a condition is, as the EDA pre
 diabetes with complications leads (AUROC 0.968, AUPRC 0.408 against 0.010 base), with
 hypertension and heart disease close behind; benign neoplasms trail (0.803, 0.061
 against 0.007) because little in a pharmacy history marks them. Calibration tracks the
-diagonal for the three conditions I checked, with mild over-confidence in hypertension's
-top decile. The coefficients are a free sanity check: ACE-inhibitor and ARB combinations
+diagonal for the three conditions I checked; the largest miss is hypertension's top
+decile, which runs slightly under (20.5% predicted, 22.0% observed). The coefficients are a free sanity check: ACE-inhibitor and ARB combinations
 for hypertension, biguanides and SGLT2 inhibitors for diabetes, antithyroid agents for
 thyroid. The model found the formulary without a claims feature in reach.
 

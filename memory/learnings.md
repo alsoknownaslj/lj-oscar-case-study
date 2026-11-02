@@ -94,3 +94,8 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   rx-only members on ≥3 antidiabetic fills scored 40x the median of the rest while
   absolute probabilities stayed ~0.03, so ranked lists/expected counts are the shippable
   artifact, never a 0.5 threshold on a rare-label probability.
+- **2026-11-02 (Opus design review)** — Calibration direction is easy to flip by eye:
+  points ABOVE the diagonal = observed > predicted = UNDER-prediction. Both final
+  reports first said hypertension's top decile was "over-confident"; the numbers
+  (predicted 0.205, observed 0.220) say slightly under. Fixed same day. Read direction
+  from the calibration arrays, never from the plot alone.
