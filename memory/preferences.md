@@ -88,3 +88,6 @@ How Lauren likes to work. Update whenever she states or demonstrates a preferenc
   agentic AI", "Reproducing results"; limitations without bold lead-ins; no Open
   questions section; no example members in the appendix; she writes the example
   prompts herself. Typos in her edits get fixed and flagged, not silently kept.
+- **2026-11-02** — Session logs/exports do not get committed to the repo: Lauren had the
+  committed one deleted ("do not merge the session logs. delete them."). Hand them over
+  as chat downloads only. The EDA findings report stays (it is provenance, not a log).
