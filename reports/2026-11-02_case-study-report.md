@@ -357,7 +357,7 @@ All code lives in the project repo, and paths are relative to its root.
   this report.
 - The rules live as constants in `src/oscar_cs/health_status.py`, and the SQL takes them
   as parameters.
-- 16 unit tests pin the rules, including the 180/181-day boundary, the infection and
+- 11 unit tests pin the rules, including the 180/181-day boundary, the infection and
   injury cap, the tier cuts, and agreement between the SQL and Python versions.
 
 ### B. Data caveats and example members
