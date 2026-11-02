@@ -99,3 +99,22 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   (their fills are all pre-window). In-window populations: **282,734 union = 192,830 both
   / 52,321 claims-only / 37,583 rx-only**; 8,877 of the 291,611 universe have no event
   inside the window at all.
+- **2026-11-02** — Mistake 12 bit our own docs: the rx hierarchy counts were the
+  profiler's `approx_count_distinct` values. Exact: **92 categories / 464 groups /
+  687 classes / 20,368 NDCs** (docs said 90/477/684/21,400). CLAUDE.md + dictionary
+  corrected; treat every "distinct (approx)" in the AUTO profile as approximate.
+- **2026-11-02** — Rx pass (canonical window; 230,413 members, 2,694,349 fills): fills per
+  member median 5 / mean 11.7 / p99 94 / max 669; distinct classes per member median 3.
+  Breadth vs depth split: antibiotics touch the most members (Penicillins 20.1%,
+  Macrolides 15.1%, ~1.4 fills/member) while chronic classes rack up fills
+  (Antidepressants 17.4% of members but 241,706 fills ≈ 6/member). Persistence: 57.1% of
+  the 1,005,177 member×class pairs are single-fill; **21.8% are sustained (≥3 fills over
+  ≥90d); 36.7% of rx members have ≥1 sustained class** — the natural rx-side chronicity
+  flag. Sustained share ladder is textbook chronic→acute: antiretrovirals 55.8%, thyroid
+  50.0%, amphetamines(ADHD) 49.5%, insulin 48.4% … toxoids 0.0%, bowel evacuants 0.2%,
+  neuraminidase inhibitors 0.2%. Same-class inter-fill gaps: modal ~28-30d (41.9% in the
+  25–35d band, median 33d) with clear 60d and ~85-90d harmonics — a real refill cycle;
+  odd isolated blip at gap=68d (unexplained, likely generator artifact). Concentration:
+  drug_class saturates (top 100 = 87% of fills) while NDC is flat (top 100 = 19%) and raw
+  diag codes middling (top 1,000 = 78% of rows) — class is the right rx feature grain,
+  NDC unusable, and claims-side grouping (CCS) is similarly justified empirically.

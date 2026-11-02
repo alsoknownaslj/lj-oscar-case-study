@@ -48,9 +48,9 @@ always parse with `quote='"'` (duckdb's auto-detection sniffs only early rows).
 | `member_id` | str | same scheme as claims |
 | `date_svc` | date | window **2013-12 → 2018-06**: starts ~21 months before claims coverage; **both tables taper out together Apr–May 2018** — canonical analysis window is 2015-09-01 → 2018-06-04 |
 | `ndc` | str | all 11-digit, leading zeros present (`00002143301`) |
-| `drug_category` | str | 90 values (coarse) |
-| `drug_group` | str | 477 values |
-| `drug_class` | str | 684 values (primary feature tier) |
+| `drug_category` | str | **92** values, exact (coarse) |
+| `drug_group` | str | **464** values, exact |
+| `drug_class` | str | **687** values, exact (primary feature tier) |
 
 ## Population overlap
 

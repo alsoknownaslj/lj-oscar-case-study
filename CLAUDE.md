@@ -81,9 +81,10 @@ One row = one fill. Columns: `record_id` (unique, up to 19 digits — keep as st
 float), `member_id` (**240,735 distinct**), `date_svc` (**2013-12 → 2018-06** — starts
 ~21 months before claims coverage; both tables taper out together over Apr–May 2018),
 `ndc` (str, all 11-digit, leading
-zeros real: `00002143301`), plus the feature hierarchy `drug_category` (90) →
-`drug_group` (477) → `drug_class` (684). Query via duckdb or the parquet cache, never
-repeated raw `pd.read_csv`.
+zeros real: `00002143301`), plus the feature hierarchy `drug_category` (**92**) →
+`drug_group` (**464**) → `drug_class` (**687**); 20,368 distinct NDCs (all counts
+exact-verified — the profiler's distinct column is approximate). Query via duckdb or the
+parquet cache, never repeated raw `pd.read_csv`.
 
 ### How the tables relate
 

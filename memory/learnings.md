@@ -41,3 +41,7 @@ Append-only (newest last). One dated bullet per lesson; compact instead of delet
   `.df()` — cast to int or vignette strings print "7.0". Fresh-container rebuild
   (fetch→cache→profile) reproduced the data dictionary byte-identically except the
   generation date: downloads are stable, data verified unchanged.
+- **2026-11-02** — The profiler's "distinct (approx)" column is `approx_count_distinct`:
+  never copy its values into hand-written docs as fact (that's how 90/477/684 drug
+  hierarchy counts went wrong; exact is 92/464/687). Exact-verify any distinct count
+  before documenting it — mistake 12 applies to our own tooling, not just ad-hoc queries.
