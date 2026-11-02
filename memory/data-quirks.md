@@ -68,3 +68,12 @@ Append as discovered (newest last). Every entry: fact + how it was verified.
   after Z-only days (gyn exams), ulcer drugs #1 after R-only days (abdominal pain is the
   top R code). Symptom/admin-only members are genuinely light rx users: 50.9% have no
   fills at all vs 82.5% rx presence for condition-diagnosed members (median 3 vs 7 fills).
+- **2026-11-02** — No-fill ranking (share of a category's claim-days with NO fill ≤30d;
+  baseline 25.5%): drug-free care concentrates exactly where clinic sense says — normal
+  pregnancy/delivery 55.5%, pregnancy complications 43.9%, **immunizations/screening 43.8%
+  (40.1% of its members never fill after one — behavioral case for re-bucketing it)**,
+  sprains 40.0%, fractures 37.8%, benign neoplasms 34.6%, Liveborn 39.4%. Most-filled:
+  COPD 11.0%, diabetes w/ compl. 11.3%, ADHD 11.4%, hypertension 13.8%, asthma 14.7%,
+  respiratory infections 16.3%. Caveat: measures ANY fill after (not a matching drug), so
+  no-fill rates are lower bounds on drug-free management. This is req-2's predictability
+  tiering, derived empirically.
